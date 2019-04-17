@@ -18,8 +18,11 @@ Project Phases:
 
 
 
+
+
+
 Summer 2019: Natural Language Processing Data Acquisition/Wake Word Optimization
 Fall 2019: Natural Language Processing Domain-Specific Implementation
-Winter 2020: 
+Winter 2020: Infrastructure - Hardware/Mobile Application Design
 
  

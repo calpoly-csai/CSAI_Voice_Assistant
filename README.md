@@ -10,7 +10,7 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 
 Project Phases:
 
-**Spring 2019: Wake Word**
+# Spring 2019: Wake Word
 
 **Active Software Developers:** Kalen Goo, Eli Bakshi, Tyler Herzog, Viet Nguyen, Kyaw Soe
 

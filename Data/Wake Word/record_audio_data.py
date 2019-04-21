@@ -18,20 +18,28 @@ while (quit_inp != 'q'):
 
         if (feat_type == "ww"):
                 target_dir = "Wake Word" # used for setting the correct directory
+                ww_noise = 0
                 first_name = input("First Name: ").lower() # used for labeling file
                 last_name = input("Last Name: ").lower() # ''
 
                 # ensures proper input
-                while not (gender == "male" or gender == "female"):
-                        gender = input("Male or Female: ").lower()
+                while not (gender == "m" or gender == "f"):
+                        gender = input("Male (m) or Female (f): ").lower()
 
                 ww_descr = (input("Enter the description: ").lower()).replace(" ","_") # labeling brief description
                 ww_loc = (input("Location: ").lower()).replace(" ","_") # labeling the recording location
 
+                while not(ww_noise == 'q' or ww_noise == 'm' or ww_noise == 'l'):
+                        ww_noise = input("Noise Level - Quiet (Q) Moderate (M) Loud (L): ").lower()
+
         else:
                 target_dir = "Not Wake Word"
+                nww_noise = 0
                 nww_descr = ((input("Enter description: ")).lower()).replace(" ","_")
                 nww_loc = (input("Location: ").lower()).replace(" ","_")
+                
+                while not(nww_noise == 'q' or nww_noise == 'm' or nww_noise == 'l'):
+                        nww_noise = input("Noise Level - Quiet (Q) Moderate (M) Loud (L): ").lower()
 
         # description session loop
         while (end_desc_sess != 'e'):

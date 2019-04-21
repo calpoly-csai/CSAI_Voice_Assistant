@@ -14,13 +14,14 @@ Project Phases:
 
 **Active Software Developers:** Kalen Goo, Eli Bakshi, Tyler Herzog, Viet Nguyen, Kyaw Soe
 
+Currently designing the wake-word solution for the voice assistant. This is to create an 
+speech recognition application layer for the assistant. Currently collecting data to extract MFCCs as input features to feed the GRU RNN.
 
 
 
-
-
-Summer 2019: Natural Language Processing Data Acquisition/Wake Word Optimization
-Fall 2019: Natural Language Processing Domain-Specific Implementation
+<br />
+Summer 2019: Natural Language Processing Data Acquisition/Wake Word Optimization <br />
+Fall 2019: Natural Language Processing Domain-Specific Implementation <br />
 Winter 2020: Infrastructure - Hardware/Mobile Application Design
 
  

@@ -12,7 +12,7 @@ Project Phases:
 
 # Spring 2019: Wake Word
 
-**Active Software Developers:** Eli Bakshi, Michael Fekadu, Kalen Goo, Tyler Herzog, Viet Nguyen, Kyaw Soe
+**Active Software Developers:** Eddie Aung, Eli Bakshi, Michael Fekadu, Kalen Goo, Tyler Herzog, Max Mohammadi, Brett Nelson, Viet Nguyen, Samuel Sachnoff, Austin Silveria, Kyaw Soe
 
 Currently designing the wake-word solution for the voice assistant. This is to create a 
 speech recognition application layer for the assistant. Currently collecting data to extract MFCCs as input features to feed the GRU RNN.

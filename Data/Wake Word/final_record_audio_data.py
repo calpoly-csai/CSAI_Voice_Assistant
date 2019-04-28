@@ -51,7 +51,6 @@ while (quit_inp != 'q'):
                 
                 p = pyaudio.PyAudio()
 
-
                 frames = []
 
                 print("Recording in\n3")

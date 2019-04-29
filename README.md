@@ -1,4 +1,4 @@
-# NIMBUS:The_CSAI_Voice_Assistant
+# NIMBUS: The CSAI Voice Assistant
 
 ![alt text](https://github.com/calpoly-csai/CSAI_Voice_Assistant/blob/master/Images/CalPoly-CSAI_cpcsai_rectanglefilled.png)
 

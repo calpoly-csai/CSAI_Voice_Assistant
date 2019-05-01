@@ -5,17 +5,12 @@ import os
 
 from wav_util import mp3_to_wav, split_wav
 
-# check for correct number of arguments
-if len(sys.argv) < 3:
-    print('Usage: scrape_gutenburg_audio.py <sound_length> ' \
-        '<audio_book_index_file_link>...')
-    sys.exit(0)
+SOUND_LENGTH = 2.5      # length of each sound split
 
-# get sound-bit length, raise error if non-float passed
-try:
-    sound_length = float(sys.argv[1])
-except:
-    raise ValueError('non-numeric value entered for sound bit length')
+# check for correct number of arguments
+if len(sys.argv) < 2:
+    print('Usage: scrape_gutenburg_audio.py <audio_book_index_file_link>...')
+    sys.exit(0)
 
 # apropriate regexps for common gutenburg html forms
 regexps = [r'<li><a href="mp3-16bit\/(\d+)-(\d+)\.mp3">.*\.mp3<\/a>',
@@ -28,7 +23,7 @@ mp3_link_frames = ["https://www.gutenberg.org/files/{}/mp3-16bit/{}-{}.mp3",
                     "https://www.gutenberg.org/files/{}/mp3/{}-{}.mp3"]
 
 # process each link user provides
-for i in range(2, len(sys.argv)):
+for i in range(1, len(sys.argv)):
     link = sys.argv[i]
 
     # send web request, get content
@@ -96,11 +91,12 @@ for i in range(2, len(sys.argv)):
         # export mp3 file to a wav file
         mp3_to_wav(mp3_file_name, wav_file_name)
 
-        # split wav files into multiple segments
-        split_wav(sound_length, wav_file_name, wav_split_prefix)
+        # split wav files into multiple segments of length = SOUND_LENGTH
+        split_wav(SOUND_LENGTH, wav_file_name, wav_split_prefix)
 
-        # remove file
+        # remove temporary files
         os.remove(wav_file_name)
+        os.remove(mp3_file_name)
         file_section_index += 1
 
     # print output

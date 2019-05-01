@@ -8,11 +8,14 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 
 **Officer Leads:** Charles Schnelz, Miles Aikens, Richa Gadgil, Jason Ku, Nathan Irwin
 
+**Faculty Advisors:** Dr. Fooad Khosmood, Dr. Wayne Pilkington, Dr. Franz Kurfess
+
+
 Project Phases:
 
 # Spring 2019: Wake Word
 
-**Active Software Developers:** Eddie Aung, Michael Fekadu, Kalen Goo, Tyler Herzog, Max Mohammadi, Brett Nelson, Viet Nguyen, Samuel Sachnoff, Austin Silveria, Kyaw Soe, John Waidhofer
+**Active Software Developers:** Michael Fekadu, Kalen Goo, Tyler Herzog, Max Mohammadi, Brett Nelson, Viet Nguyen, Samuel Sachnoff, Austin Silveria, John Waidhofer
 
 Currently designing the wake-word solution for the voice assistant. This is to create a 
 speech recognition application layer for the assistant. Currently collecting data to extract MFCCs as input features to feed the GRU RNN. We are currently collecting wake word audio data on the name of the voice assistant "Nimbus" and non wake word which would result in false activations.

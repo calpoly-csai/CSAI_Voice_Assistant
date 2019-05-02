@@ -1,31 +1,18 @@
-import pyaudio
-import wave
-import numpy as np
-import os
-from speechpy.feature import mfcc
-import json
-
-RATE = 16000
-WINDOW = 0.1
-STRIDE = 0.05
-MFCC = 13
-FILTER_BANKS = 20
-FFT_NUM = 512
-CURR_PATH = os.getcwd() + "\\"
-
+# ========================
+# Part 1
+# Remove for the demo
+# ========================
 def ConvertToMFCC(fileName, path):
-        return mfcc(readAudioData(path + fileName),RATE,WINDOW,STRIDE,MFCC,FILTER_BANKS,FFT_NUM, 0, None, True).tolist()
+# ========================
+# Part 3
+# Remove for the demo
+# ========================
 
 def readAudioData(fileName):
-        wf = wave.open(fileName, 'rb')
-
-        raw_sig = wf.readframes(wf.getnframes())
-
-        audio_sig = np.fromstring(raw_sig,'Int16')
-
-        wf.close()
-
-        return audio_sig
+# ========================
+# Part 2
+# Remove for the demo
+# ========================
 
 def obtainAudioData(data_inp):
 

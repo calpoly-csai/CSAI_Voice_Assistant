@@ -47,8 +47,9 @@ while (quit_inp != 'q'):
                         nww_noise = input("Noise Level - Quiet (Q) Moderate (M) Loud (L): ").lower()
 
         # description session loop
-        while (end_desc_sess != 'e'):
-                
+        #while (end_desc_sess != 'e'):
+        while (1):
+   
                 p = pyaudio.PyAudio()
 
                 frames = []
@@ -69,19 +70,19 @@ while (quit_inp != 'q'):
                 
                 print("**RECORDING ENDED**")
 
-                while(input("Play Audio (p): ").lower() == 'p'):
-                        for values in frames:
-                                stream.write(values)
+                # while(input("Play Audio (p): ").lower() == 'p'):
+                #         for values in frames:
+                #                 stream.write(values)
 
                 stream.stop_stream()
                 stream.close()
 
                 p.terminate()
 
-                if (input("To delete, type (d): ").lower() == 'd'):
-                        pass
-
-                else:
+                # if (input("To delete, type (d): ").lower() == 'd'):
+                #         pass
+                if(True):
+                # else:
                         curr_time = time.strftime("%m%d%Y%H%M%S", time.localtime())
 
                         if (feat_type == "ww"):
@@ -99,6 +100,6 @@ while (quit_inp != 'q'):
                         wf.writeframes(b''.join(frames))
                         wf.close()
 
-                end_desc_sess = input("If finished with description session, type (e); otherwise, type anything else: ").lower()
+                #end_desc_sess = input("If finished with description session, type (e); otherwise, type anything else: ").lower()
 
         quit_inp = input("If finished recording, type (q). Otherwise, type anything else: ").lower()

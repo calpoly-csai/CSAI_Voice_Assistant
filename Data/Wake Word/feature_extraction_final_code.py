@@ -1,20 +1,38 @@
-# ========================
-# Part 1
-# Remove for the demo
-# ========================
-def ConvertToMFCC(fileName, path):
-# ========================
-# Part 3
-# Remove for the demo
-# ========================
+import pyaudio
+import wave
+import numpy as np
+import os
+from speechpy.feature import mfcc
+import json
 
-def readAudioData(fileName):
-# ========================
-# Part 2
-# Remove for the demo
-# ========================
+# CONSTANTS
+RATE = 16000 # sample rate
+WINDOW = 0.1 # size of window
+STRIDE = 0.05 # time between each window
+MFCC = 13 # number of desired MFCCs
+FILTER_BANKS = 20 # number of filter banks to compute
+FFT_NUM = 512 # length of fast fourier transform window
+CURR_PATH = os.getcwd() + "\\" # current path
 
-def obtainAudioData(data_inp):
+def Convert_To_MFCC(fileName, path):
+        return mfcc(Read_Audio_Data(path + fileName),RATE,WINDOW,STRIDE,MFCC,FILTER_BANKS,FFT_NUM,0,None,True).tolist()
+
+def Read_Audio_Data(fileName):
+        #open the wave file
+        wf = wave.open(fileName, 'rb')
+
+        #get the packed bytes
+        raw_sig = wf.readframes(wf.getnframes())
+
+        #convert the packed bytes into integers
+        audio_sig = np.fromstring(raw_sig, 'Int16')
+
+        # close the file
+        wf.close()
+
+        return audio_sig
+
+def Obtain_Audio_Data(data_inp):
 
         # desired dir for data extraction
         audio_dir = CURR_PATH + data_inp + "\\"
@@ -48,7 +66,7 @@ def obtainAudioData(data_inp):
 
                 # process the sample if it is not processed yet
                 if (sample not in curr_data):
-                        curr_data[sample.replace(".wav","")] = ConvertToMFCC(sample,audio_dir)
+                        curr_data[sample.replace(".wav","")] = Convert_To_MFCC(sample,audio_dir)
 
         # place contents into the json 
         with open(json_type, 'w') as outfile:
@@ -62,4 +80,4 @@ if __name__ == '__main__':
         while not((data_inp == "Wake Word") or (data_inp == "Not Wake Word")):
                 data_inp = input("Enter Desired Data to Process (Wake Word or Not Wake Word): ")
 
-        obtainAudioData(data_inp)
+        Obtain_Audio_Data(data_inp)

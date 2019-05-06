@@ -26,7 +26,7 @@ while (quit_inp != 'q'):
                 ww_noise = 0
                 first_name = input("First Name: ").lower() # used for labeling file
                 last_name = input("Last Name: ").lower() # ''
-
+                background = "n"
                 # ensures proper input
                 while not (gender == "m" or gender == "f"):
                         gender = input("Male (m) or Female (f): ").lower()
@@ -45,51 +45,95 @@ while (quit_inp != 'q'):
                 
                 while not(nww_noise == 'q' or nww_noise == 'm' or nww_noise == 'l'):
                         nww_noise = input("Noise Level - Quiet (Q) Moderate (M) Loud (L): ").lower()
+                background = "a"
+                while not ((background == "y") or (background == "n")):
+                        background = input("Loop? ")
 
         # description session loop
-        #while (end_desc_sess != 'e'):
-        while (1):
-   
-                p = pyaudio.PyAudio()
+        if (background == "n"):
+                while (end_desc_sess != 'e'):
+        
+                        p = pyaudio.PyAudio()
 
-                frames = []
+                        frames = []
 
-                print("Recording in\n3")
-                time.sleep(1)
-                print("2")
-                time.sleep(1)
-                print("1")
-                time.sleep(1)
-                print("**RECORDING**")
+                        print("Recording in\n3")
+                        time.sleep(1)
+                        print("2")
+                        time.sleep(1)
+                        print("1")
+                        time.sleep(1)
+                        print("**RECORDING**")
 
-                stream = p.open(format = FORMAT, channels = CHANNELS, rate = RATE, input = True, output = True, frames_per_buffer = CHUNK)
+                        stream = p.open(format = FORMAT, channels = CHANNELS, rate = RATE, input = True, output = True, frames_per_buffer = CHUNK)
 
-                for i in range(0,int(RATE/CHUNK * RECORD_SECONDS)):
-                        data = stream.read(CHUNK)
-                        frames.append(data)
-                
-                print("**RECORDING ENDED**")
+                        for i in range(0,int(RATE/CHUNK * RECORD_SECONDS)):
+                                data = stream.read(CHUNK)
+                                frames.append(data)
+                        
+                        print("**RECORDING ENDED**")
 
-                # while(input("Play Audio (p): ").lower() == 'p'):
-                #         for values in frames:
-                #                 stream.write(values)
+                        while(input("Play Audio (p): ").lower() == 'p'):
+                                for values in frames:
+                                        stream.write(values)
 
-                stream.stop_stream()
-                stream.close()
+                        stream.stop_stream()
+                        stream.close()
 
-                p.terminate()
+                        p.terminate()
 
-                # if (input("To delete, type (d): ").lower() == 'd'):
-                #         pass
-                if(True):
-                # else:
+                        if (input("To delete, type (d): ").lower() == 'd'):
+                                pass
+                        else:
+                                curr_time = time.strftime("%m%d%Y%H%M%S", time.localtime())
+
+                                if (feat_type == "ww"):
+                                        file_name = "ww_" + gender + "_" + ww_descr + "_" + ww_loc + "_" + ww_noise + "_" + last_name + "_" + first_name + "_" + curr_time + "_ewenike.wav"
+
+                                else:
+                                        file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_ewenike.wav"
+
+                                print(file_name + " has been saved.")
+
+                                wf = wave.open(os.getcwd() + "\\" + target_dir + "\\" + file_name, 'wb')
+                                wf.setnchannels(CHANNELS)
+                                wf.setsampwidth(p.get_sample_size(FORMAT))
+                                wf.setframerate(RATE)
+                                wf.writeframes(b''.join(frames))
+                                wf.close()
+
+                        end_desc_sess = input("If finished with description session, type (e); otherwise, type anything else: ").lower()
+        else:
+                while (True):
+        
+                        p = pyaudio.PyAudio()
+
+                        frames = []
+
+                        print("Recording in\n3")
+                        time.sleep(1)
+                        print("2")
+                        time.sleep(1)
+                        print("1")
+                        time.sleep(1)
+                        print("**RECORDING**")
+
+                        stream = p.open(format = FORMAT, channels = CHANNELS, rate = RATE, input = True, output = True, frames_per_buffer = CHUNK)
+
+                        for i in range(0,int(RATE/CHUNK * RECORD_SECONDS)):
+                                data = stream.read(CHUNK)
+                                frames.append(data)
+                        
+                        print("**RECORDING ENDED**")
+
+                        stream.stop_stream()
+                        stream.close()
+
+                        p.terminate()
+
                         curr_time = time.strftime("%m%d%Y%H%M%S", time.localtime())
 
-                        if (feat_type == "ww"):
-                                file_name = "ww_" + gender + "_" + ww_descr + "_" + ww_loc + "_" + ww_noise + "_" + last_name + "_" + first_name + "_" + curr_time + "_ewenike.wav"
-
-                        else:
-                                file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_ewenike.wav"
+                        file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_ewenike.wav"
 
                         print(file_name + " has been saved.")
 
@@ -99,7 +143,5 @@ while (quit_inp != 'q'):
                         wf.setframerate(RATE)
                         wf.writeframes(b''.join(frames))
                         wf.close()
-
-                #end_desc_sess = input("If finished with description session, type (e); otherwise, type anything else: ").lower()
 
         quit_inp = input("If finished recording, type (q). Otherwise, type anything else: ").lower()

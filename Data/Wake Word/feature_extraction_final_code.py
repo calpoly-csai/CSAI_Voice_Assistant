@@ -14,15 +14,10 @@ FILTER_BANKS = 20 # number of filter banks to compute
 FFT_NUM = 512 # length of fast fourier transform window
 CURR_PATH = os.getcwd() + "\\" # current path
 
-#####def Convert_To_MFCC(fileName, path):
 def Convert_To_MFCC(wf):
-        ##### return mfcc(Read_Audio_Data(path + fileName),RATE,WINDOW,STRIDE,MFCC,FILTER_BANKS,FFT_NUM,0,None,True).tolist()
         return mfcc(Read_Audio_Data(wf),RATE,WINDOW,STRIDE,MFCC,FILTER_BANKS,FFT_NUM,0,None,True).tolist()
 
-######def Read_Audio_Data(fileName):
 def Read_Audio_Data(wf):
-
-        #*** wf = wave.open(fileName, 'rb')
 
         #get the packed bytes
         raw_sig = wf.readframes(wf.getnframes())
@@ -35,20 +30,15 @@ def Read_Audio_Data(wf):
 
         return audio_sig
 
-#def Obtain_Audio_Data(data_inp):
 def Obtain_Audio_Data(data_inp, type_inp):
 
         # desired dir for data extraction
-
-        ##### audio_dir = CURR_PATH + data_inp + "\\"
         audio_dir = CURR_PATH + data_inp + "\\" + type_inp + "_Data\\"
 
         # obtain files within the dir
         audio_list = os.listdir(audio_dir)
 
         # name of the json file based on user input
-
-        ##### json_type = data_inp.replace(" ","_") + "_data.json"
         json_type = data_inp.replace(" ","_") + "_" + type_inp + "_data.json"
 
         # data dictionary
@@ -75,17 +65,15 @@ def Obtain_Audio_Data(data_inp, type_inp):
                 # process the sample if it is not processed yet
                 if (sample not in curr_data):
                         
-                        #ADD
+                        # open a wav file
                         wf = wave.open(audio_dir + sample, 'rb')
 
-                        #ADD
+                        
                         # ensures data is of the correct format
                         if (wf.getnchannels() == 1 and wf.getsampwidth() == 2 and wf.getframerate() == 16000):
-                                ##### curr_data[sample.replace(".wav","")] = Convert_To_MFCC(sample,audio_dir)
                                 curr_data[sample.replace(".wav","")] = Convert_To_MFCC(wf)
-                        # ADD
+                        
                         else:
-                                # ADD
                                 print("<<" + sample + ">> is of invalid format.")
 
         # place contents into the json 
@@ -95,15 +83,12 @@ def Obtain_Audio_Data(data_inp, type_inp):
         print("<<" + json_type + ">> has been stored in the directory: " + str(os.getcwd()))
 
 if __name__ == '__main__':
-        ##### data_inp = 0
         data_inp = type_inp = 0
         
         while not((data_inp == "Wake Word") or (data_inp == "Not Wake Word")):
                 data_inp = input("Enter Desired Data to Process (Wake Word or Not Wake Word): ")
   
-        ##### ADD
         while not((type_inp == "Test") or (type_inp == "Train")):
                 type_inp = input("Test or Train Data (Test or Train) ")
 
-        ##### Obtain_Audio_Data(data_inp)          
         Obtain_Audio_Data(data_inp, type_inp)

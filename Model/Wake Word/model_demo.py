@@ -4,10 +4,26 @@ import pyaudio
 from speechpy.feature import mfcc
 import wave
 import numpy as np
-# ============
-# Demo Part 1
-# Remove 
-# ============
+import tensorflow as tf
+from tensorflow.keras import models, layers
+from datetime import datetime
+import random
+
+NWW_PATH = "C:\\Users\\cej17\\Documents\\CSAI\\CSAI_Voice_Assistant\\Data\\Wake Word\\Not Wake Word\\"
+JSON_PATH = "C:\\Users\\cej17\\Documents\\Coding_Projects\\rand\\"
+
+WW_TRAIN = "Wake_Word_Train_data.json"
+NWW_TRAIN = "Not_Wake_Word_Train_data.json"
+WW_TEST = "Wake_Word_Test_data.json"
+NWW_TEST = "Not_Wake_Word_Test_data.json"
+
+CONFIDENCE = 0.6
+GRU_UNITS = 20
+DROPOUT = 0.3
+ACTIVATIONS = 4
+EPOCHS = 30
+BATCH_SIZE = 32
+
 CHUNK = 2048
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
@@ -20,10 +36,13 @@ FILTER_BANKS = 20 # number of filter banks to compute
 FFT_NUM = 512 # length of fast fourier transform window
 
 def build_model():
-    # ============
-    # Demo Part 6
-    # Remove 
-    # ============
+    model = models.Sequential()
+    model.add(layers.GRU(GRU_UNITS, activation='linear', input_shape=(46,13), dropout=DROPOUT, name='net'))
+    model.add(layers.Dense(1, activation='sigmoid'))
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+    return model
+
 
 p = pyaudio.PyAudio()
 
@@ -51,39 +70,33 @@ while not(read == "y" or read == "n"):
     read = input("Train new model? (y or n) ")
 
 if read == "y":
-    with open(os.path.join(JSON_PATH,"Wake_Word_Train_data.json")) as f_in:
-        # ============
-        # Demo Part 2
-        # Remove 
-        # ============
+    with open(os.path.join(JSON_PATH, WW_TRAIN)) as f_in:
+        ww_train_data = json.load(f_in)
+        ww_train_data_keys = list(ww_train_data.keys())
+        random.shuffle(ww_train_data_keys)
 
-    with open(os.path.join(JSON_PATH,"Not_Wake_Word_Train_data.json")) as f_in:
-        # ============
-        # Demo Part 3
-        # Remove 
-        # ============
+    with open(os.path.join(JSON_PATH, NWW_TRAIN)) as f_in:
+        nww_train_data = json.load(f_in)
+        nww_train_data_keys = list(nww_train_data.keys())
+        random.shuffle(nww_train_data_keys) 
 
-    with open(os.path.join(JSON_PATH,"Wake_Word_Test_data.json")) as f_in:
+    with open(os.path.join(JSON_PATH, WW_TEST)) as f_in:
         ww_test_data = json.load(f_in)
         ww_test_data_keys = list(ww_test_data.keys())
         random.shuffle(ww_test_data_keys)
 
-    with open(os.path.join(JSON_PATH,"Not_Wake_Word_Test_data.json")) as f_in:
+    with open(os.path.join(JSON_PATH, NWW_TEST)) as f_in:
         nww_test_data = json.load(f_in)
         nww_test_data_keys = list(nww_test_data.keys())
         random.shuffle(nww_test_data_keys)
 
     for i in range(len(ww_train_data_keys)):
-        # ============
-        # Demo Part 4
-        # Remove 
-        # ============
+        train_data.append(ww_train_data[ww_train_data_keys[i]])
+        train_labels.append(1)
 
     for i in range(len(nww_train_data_keys)):
-        # ============
-        # Demo Part 5
-        # Remove 
-        # ============
+        train_data.append(nww_train_data[nww_train_data_keys[i]])
+        train_labels.append(0)
 
     for i in range(len(ww_test_data_keys)):
         test_data.append(ww_test_data[ww_test_data_keys[i]])
@@ -93,23 +106,31 @@ if read == "y":
         test_data.append(nww_test_data[nww_test_data_keys[i]])
         test_labels.append(0)
 
-    # ============
-    # Demo Part 7
-    # Remove 
-    # ============
+    model = build_model()
+
+    test_data = np.array(test_data, dtype=float)
+    train_data = np.array(train_data, dtype=float)
+
+    model.fit(train_data, train_labels, epochs=EPOCHS, batch_size=BATCH_SIZE, verbose=1)
+
+    print(model.evaluate(test_data, test_labels))
+
+    model.save("model_" + datetime.now().strftime("%m%d%Y%H%M%S") + ".h5")
 
 else:
     model = 0
-    while (model not in os.listdir()):
-        # ============
-        # Demo Part 8
-        # Remove 
-        # ============
 
-# ============
-# Demo Part 9
-# Remove 
-# ============
+    while (model not in os.listdir()):
+        model = input("Input Model Name: ")
+
+    model = models.load_model(model)
+
+print(model.summary())
+stream = p.open(format = FORMAT, channels = CHANNELS, rate = RATE, input = True, frames_per_buffer = CHUNK)
+frames = []
+false_act = 0
+act_count = 0
+
 while not(false_act == "y" or false_act == "n"):
     false_act = input("False Activation Collection Mode? (y or n): ")
 
@@ -124,20 +145,24 @@ print()
 
 while True:
 
-    # ============
-    # Demo Part 10
-    # Remove 
-    # ============
+    data = stream.read(CHUNK)
+    frames.append(data)
 
-        # ============
-        # Demo Part 11
-        # Remove 
-        # ============
+    if (len(frames) > 19):
 
-            # ============
-            # Demo Part 12
-            # Remove 
-            # ============
+        in_data = np.fromstring(np.array(frames[:19]),'Int16')
+
+        audio_sig = np.array([mfcc(in_data, RATE, WINDOW, STRIDE, MFCC, FILTER_BANKS, FFT_NUM, 0, None, True)])
+
+        prediction = model.predict(audio_sig)
+
+        print(prediction)
+
+        if (prediction > CONFIDENCE):
+            act_count+=1
+
+            if (act_count >= ACTIVATIONS):
+                print("NIMBUS", end=" ", flush=True)
 
                 if(false_act == "y"):
 
@@ -151,12 +176,7 @@ while True:
                     print("\n<<"+file_name+">> has been saved\n")
 
         else:
-            # ============
-            # Demo Part 13
-            # Remove 
-            # ============
-
-        # ============
-        # Demo Part 14
-        # Remove 
-        # ============
+            act_count = 0
+            print(" ", end="", flush=True)
+ 
+        frames = frames[1:]

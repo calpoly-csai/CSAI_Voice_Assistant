@@ -15,7 +15,7 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 
 **Active Software Developers:** Michael Fekadu, Kalen Goo, Tyler Herzog, Max Mohammadi, Brett Nelson, Viet Nguyen, Samuel Sachnoff, Austin Silveria, John Waidhofer
 
-The CSAI Voice Assistant Project Team is currently designing the wake-word solution for the voice assistant. This is to create a speech recognition application layer for the assistant which will activate our voice assistant by saying "Nimbus". We have collected wake word audio data on the name of the voice assistant "Nimbus" and non wake word which would result in false activations. With this audio data, we extract MFCCs as input features to feed the GRU RNN. We are currently building and optimizing our GRU RNN model.
+The CSAI Voice Assistant Project Team is currently designing the wake-word solution for the voice assistant. This is to create a speech recognition application layer for the assistant which will activate our voice assistant by saying "Nimbus". We have collected wake word audio data on the name of the voice assistant "Nimbus" and non wake word which would result in false activations. With this audio data, we extract MFCCs as input features to feed the Gated Recurrent Unit. We are currently building and optimizing our Gated Recurrent Unit model and designing infrastructure to implement our current model.
 
 
 

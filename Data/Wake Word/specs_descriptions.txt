@@ -1,0 +1,78 @@
+Audio Specs:
+- 16 bit int
+- Wav file format
+- 16 KHz Sample Rate
+- Chunk Size 2048
+
+Wake Word
+
+Description:
+
+ADD THE PRONUNCIATION OF THE WORD TO THE DESCRIPTION, FOLLOWED BY THE WAY THE WORD IS SPOKEN.
+
+EX: ww_m_iss-curious_classroom_q_skywalker_luke_04222019124032_ewenike.wav
+
+- Iss
+
+	Saying the word "Nimbus" as if the "us" were pronounced "iss" 	like from the words "miss" "diss" "kiss"
+
+- Us
+	
+	Saying the word "Nimbus" as if the "us" were pronounced "bus" 	like from the word "bus" 
+
+
+ADD ONE OF THE FOLLOWING TO THE PRONUNCIATION. FEEL FREE TO ADD YOUR OWN IF YOU COME UP WITH SOMETHING ELSE.
+
+- Hushed
+	
+	Saying the word with at a quiet, hushed volume.
+
+- Curious
+	
+	Saying the word in an inquisitive manner. 
+
+- Serious
+
+	Saying the word in a serious, monotonic manner.
+
+- Elongated
+	
+	Saying the word by elongating the vowels
+
+- Quick
+	
+	Saying the word in a quick manner
+
+- Accent "Southern" "East-Coast" "English" "Brazilian" 
+	
+	For non-California accents, provide the accent/nationality
+
+- Head Direction "Turned-Around" "Pointed-Up" "To-The-Side"
+	
+	If you are intentionally pointed your mouth away from the mic
+
+===================================================================
+
+Not Wake Word
+
+Description:
+
+- Rhyme-<Word> "Rhyme-Business" "Rhyme-Brimbus"
+
+	Saying words or gibberish that rhyme with "Nimbus". Ex: 	"Business" "Gimbus" "Thimbus" "Brimbus"
+
+- Background
+	
+	Simply running to capture background noise.
+
+- <Specific Sound File>
+	
+	For sound files that are run to trigger the a false activation 	of the wake word. This would include audiobooks, songs, 	podcasts.
+
+- Partials of the Word "Nim" "Bus" "Nimbuh" "Nimb"
+	
+	For capturing partials of the word without pronouncing the 	entire word.
+	
+	
+
+	

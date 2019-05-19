@@ -1,4 +1,4 @@
-# CSAI_Voice_Assistant
+# NIMBUS: The CSAI Voice Assistant
 
 ![alt text](https://github.com/calpoly-csai/CSAI_Voice_Assistant/blob/master/Images/CalPoly-CSAI_cpcsai_rectanglefilled.png)
 
@@ -6,16 +6,16 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 
 **Project Manager & Lead:** Chidi Ewenike
 
-**Officer Leads:** Charles Schnelz, Miles Aikens, Richa Gadgil, Jason Ku, Nathan Irwin
+**Officer Leads:** Charles Schnelz, Miles Aikens, Richa Gadgil, Jason Ku, Nathan Irwin, Ryan Elliot
 
-Project Phases:
+**Faculty Advisors:** Dr. Fooad Khosmood, Dr. Wayne Pilkington, Dr. Franz Kurfess
+
 
 # Spring 2019: Wake Word
 
-**Active Software Developers:** Eli Bakshi, Michael Fekadu, Kalen Goo, Tyler Herzog, Viet Nguyen, Kyaw Soe
+**Active Software Developers:** Michael Fekadu, Kalen Goo, Tyler Herzog, Max Mohammadi, Brett Nelson, Viet Nguyen, Samuel Sachnoff, Austin Silveria, John Waidhofer
 
-Currently designing the wake-word solution for the voice assistant. This is to create a 
-speech recognition application layer for the assistant. Currently collecting data to extract MFCCs as input features to feed the GRU RNN.
+The CSAI Voice Assistant Project Team is currently designing the wake-word solution for the voice assistant. This is to create a speech recognition application layer for the assistant which will activate our voice assistant by saying "Nimbus". We have collected wake word audio data on the name of the voice assistant "Nimbus" and non wake word which would result in false activations. With this audio data, we extract MFCCs as input features to feed the Gated Recurrent Unit. We are currently building and optimizing our Gated Recurrent Unit model and designing infrastructure to implement our current model.
 
 
 

@@ -6,7 +6,7 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 
 **Project Manager & Lead:** [Chidi Ewenike](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/chidi_ewenike_profile.html)
 
-**Officer Leads:** Charles Schnelz, Miles Aikens, Richa Gadgil, Jason Ku, Nathan Irwin, Ryan Elliot
+**Officer Leads:** Charles Schnelz, [Miles Aikens](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/miles_aikens_profile.html), Richa Gadgil, Jason Ku, Nathan Irwin, Ryan Elliot
 
 **Faculty Advisors:** Dr. Fooad Khosmood, Dr. Wayne Pilkington, Dr. Franz Kurfess
 

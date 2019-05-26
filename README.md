@@ -4,7 +4,7 @@
 
 The "Cal Poly Computer Science & Artificial Intelligence" club is designing a voice assistant to provide the Cal Poly Computer Science department with relavent information about the department and university. The intent is for users to ask for information about the department such as professor's office hours & expertise, course prerequisites, etc. Users can also ask the assistant for general information about the university such as the history, mascott, and more.
 
-**Project Manager & Lead:** Chidi Ewenike
+**Project Manager & Lead:** [Chidi Ewenike](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/chidi_ewenike_profile.html)
 
 **Officer Leads:** Charles Schnelz, Miles Aikens, Richa Gadgil, Jason Ku, Nathan Irwin, Ryan Elliot
 

@@ -44,7 +44,7 @@ _Machine Learning_
 
 # Spring 2019: Wake Word
 
-**Active Software Developers:** Michael Fekadu, [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), Tyler Herzog, [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), Brett Nelson, [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), Samuel Sachnoff, Austin Silveria, John Waidhofer
+**Active Software Developers:** [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), Tyler Herzog, [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), Brett Nelson, [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), Samuel Sachnoff, Austin Silveria, John Waidhofer
 
 The CSAI Voice Assistant Project Team is currently designing the wake-word solution for the voice assistant. This is to create a speech recognition application layer for the assistant which will activate our voice assistant by saying "Nimbus". We have collected wake word audio data on the name of the voice assistant "Nimbus" and non wake word which would result in false activations. With this audio data, we extract MFCCs as input features to feed the Gated Recurrent Unit. We are currently building and optimizing our Gated Recurrent Unit model and designing infrastructure to implement our current model.
 

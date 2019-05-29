@@ -28,6 +28,7 @@ _Natural Language Processing Lead_
 **Michael Fekadu** - 
 _Data Lead/Software Developer_
 
+
 **Faculty Advisors:** Dr. Fooad Khosmood, Dr. Wayne Pilkington, Dr. Franz Kurfess
 
 

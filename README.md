@@ -4,9 +4,29 @@
 
 The "Cal Poly Computer Science & Artificial Intelligence" club is designing a voice assistant to provide the Cal Poly Computer Science department with relavent information about the department and university. The intent is for users to ask for information about the department such as professor's office hours & expertise, course prerequisites, etc. Users can also ask the assistant for general information about the university such as the history, mascott, and more.
 
-**Project Manager & Lead:** [Chidi Ewenike](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/chidi_ewenike_profile.html)
+[**Chidi Ewenike**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/chidi_ewenike_profile.html) - 
+_Project Manager/Lead_
 
-**Officer Leads:** Charles Schnelz, [Miles Aikens](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/miles_aikens_profile.html), [Jason Ku](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jason_ku_profile.html), Ryan Elliot, Richa Gadgil, Nathan Irwin
+**Charles Schnelz** - 
+_Software Lead_
+
+[**Miles Aikens**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/miles_aikens_profile.html) - 
+_Software/Android Development Lead_
+
+[**Jason Ku**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jason_ku_profile.html) - 
+_Software Lead_
+
+**Ryan Elliot** - 
+_iOS Development Lead_
+
+**Nathan Irwin** - 
+_General Lead_
+
+**Richa Gadgil** - 
+_Natural Language Processing Lead_
+
+**Michael Fekadu** - 
+_Data Lead/Software Developer_
 
 **Faculty Advisors:** Dr. Fooad Khosmood, Dr. Wayne Pilkington, Dr. Franz Kurfess
 

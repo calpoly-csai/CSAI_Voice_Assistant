@@ -32,7 +32,14 @@ _Data Lead_
 
 # Faculty Advisors
 
-[Dr. Fooad Khosmood](http://users.csc.calpoly.edu/~foaad/), [Dr. Wayne Pilkington](http://www.ee.calpoly.edu/faculty/wpilking/), [Dr. Franz Kurfess](http://users.csc.calpoly.edu/~fkurfess/)
+[Dr. Fooad Khosmood](http://users.csc.calpoly.edu/~foaad/) -
+_Natural Language Processing/Machine Learning_
+
+[Dr. Wayne Pilkington](http://www.ee.calpoly.edu/faculty/wpilking/) - 
+_Audio Processing_
+
+[Dr. Franz Kurfess](http://users.csc.calpoly.edu/~fkurfess/) -
+_Machine Learning_
 
 
 # Spring 2019: Wake Word

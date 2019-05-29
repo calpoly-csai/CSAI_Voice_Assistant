@@ -4,8 +4,10 @@
 
 The "Cal Poly Computer Science & Artificial Intelligence" club is designing a voice assistant to provide the Cal Poly Computer Science department with relavent information about the department and university. The intent is for users to ask for information about the department such as professor's office hours & expertise, course prerequisites, etc. Users can also ask the assistant for general information about the university such as the history, mascott, and more.
 
+# Leads
+
 [**Chidi Ewenike**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/chidi_ewenike_profile.html) - 
-_Project Manager/Lead_
+_Project Lead_
 
 **Charles Schnelz** - 
 _Software Lead_
@@ -28,8 +30,9 @@ _Natural Language Processing Lead_
 **Michael Fekadu** - 
 _Data Lead_
 
+# Faculty Advisors
 
-**Faculty Advisors:** Dr. Fooad Khosmood, Dr. Wayne Pilkington, Dr. Franz Kurfess
+[Dr. Fooad Khosmood](http://users.csc.calpoly.edu/~foaad/), [Dr. Wayne Pilkington](http://www.ee.calpoly.edu/faculty/wpilking/), [Dr. Franz Kurfess](http://users.csc.calpoly.edu/~fkurfess/)
 
 
 # Spring 2019: Wake Word

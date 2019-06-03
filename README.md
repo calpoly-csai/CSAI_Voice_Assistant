@@ -42,10 +42,31 @@ _Audio Processing_
 [**Dr. Franz Kurfess**](http://users.csc.calpoly.edu/~fkurfess/) -
 _Machine Learning_
 
+# Active Software Developers:
+
+[Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
+
+Tyler Herzog
+
+[Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
+
+Brett Nelson
+
+[Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html)
+
+[Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html)
+
+Samuel Sachnoff
+
+[Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
+
+[Cameron Toy](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html)
+
+John Waidhofer
 
 # Spring 2019: Wake Word
 
-**Active Software Developers:** [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), Tyler Herzog, [Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html), [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), Brett Nelson, [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), Samuel Sachnoff, [Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html), [Cameron Toy](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html),  John Waidhofer
+**Contributors:** [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), Tyler Herzog, [Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html), [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), Brett Nelson, [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), Samuel Sachnoff, [Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html), [Cameron Toy](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html),  John Waidhofer
 
 The CSAI Voice Assistant Project Team is currently designing the wake-word solution for the voice assistant. This is to create a speech recognition application layer for the assistant which will activate our voice assistant by saying "Nimbus". We have collected wake word audio data on the name of the voice assistant "Nimbus" and non wake word which would result in false activations. With this audio data, we extract MFCCs as input features to feed the Gated Recurrent Unit. We are currently building and optimizing our Gated Recurrent Unit model and designing infrastructure to implement our current model.
 

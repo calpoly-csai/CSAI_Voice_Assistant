@@ -56,6 +56,8 @@ Brett Nelson
 
 [Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html)
 
+Samuel Sachnoff
+
 [Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
 [Cameron Toy](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html)

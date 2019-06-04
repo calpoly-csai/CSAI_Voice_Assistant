@@ -74,7 +74,7 @@ The CSAI Voice Assistant Project Team is currently designing the wake-word solut
 
 
 # Summer 2019: Data Acquisition/Optimization
-Natural Language Processing data acquisition and optimization of the current wake word solution.
+Natural Language Processing data acquisition and optimization of the current wake word solution. We are currently developing data collection applications for [iOS](https://github.com/calpoly-csai/ios-voice-assistant), [Android](https://github.com/calpoly-csai/android-voice-assistant), and [Web](https://github.com/calpoly-csai/web-validate-collect) for members to access. These applications will allow for both wake-word and NLP intent collection and validation. 
 
 # Fall 2019: Natural Language Processing Domain-Specific Implementation 
 Applying the NLP layer and optimizing to make accurate queries for accurate predictions. Also scripting a site scraping program to obtain necessary information and adding such information to a look-up table for future access.

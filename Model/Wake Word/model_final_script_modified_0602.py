@@ -22,37 +22,45 @@ WW_TEST = "Wake_Word_Test_data.json"
 NWW_TEST = "Not_Wake_Word_Test_data.json"
 
 CONFIDENCE = 0.6 # prediction confidence 
-GRU_UNITS = 20 # GRU unit size
+GRU_UNITS = 64 # GRU unit size
 DROPOUT = 0.3 # dropout size
-ACTIVATIONS = 3 # number of activations for confident activation
-EPOCHS = 30 # number of fwd and bckwd props
-BATCH_SIZE = 32 # batch size
+ACTIVATIONS = 4 # number of activations for confident activation
+EPOCHS = 1 # number of fwd and bckwd props
+BATCH_SIZE = 8 # batch size
 
 CHUNK = 2048
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
 
-WINDOW = 0.1 # size of window
-STRIDE = 0.05 # time between each window
+WINDOW = 0.128 # size of window
+STRIDE = 0.064 # time between each window
 MFCC = 13 # number of desired MFCCs
 FILTER_BANKS = 20 # number of filter banks to compute
 FFT_NUM = 512 # length of fast fourier transform window
 
 def build_model():
 
-
     # define a model as a sequence of layers
     model = models.Sequential()
 
+    model.add(layers.Dense(units=16,activation='relu', input_shape=(36,13)))
+    model.add(layers.Dense(units=16,activation='relu'))
+    model.add(layers.Dense(units=16,activation='relu'))
+    model.add(layers.Dense(units=16,activation='relu'))
+    model.add(layers.Dense(units=16,activation='relu'))
+    model.add(layers.Dense(units=16,activation='relu'))
+    model.add(layers.Dense(units=16,activation='relu'))
+    model.add(layers.Dense(units=16,activation='relu'))
+
     # add first layer which is the GRU
-    model.add(layers.GRU(GRU_UNITS, activation='linear', input_shape=(46,13), dropout=DROPOUT, name='net'))
+    model.add(layers.GRU(GRU_UNITS, activation='linear',dropout=DROPOUT))
     
     # add second layer which is a output for binary classification
     model.add(layers.Dense(1, activation='sigmoid'))
 
     # define loss and optimzer fns
-    model.compile(optimizer='adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+    model.compile(optimizer='adam', loss = 'binary_crossentropy', metrics = ['acc'])
     
     return model
 
@@ -176,20 +184,20 @@ if read == "y":
     train_data = np.array(train_data, dtype=float)
 
     # train the model
-    model.fit(train_data, train_labels, epochs=EPOCHS, batch_size=BATCH_SIZE, verbose=1)
+    history = model.fit(train_data, train_labels, epochs=EPOCHS, batch_size=BATCH_SIZE, verbose=1, validation_data=(test_data,test_labels))
 
     # evaluate the model with the test data
-    print(model.evaluate(test_data,test_labels))
-
+    loss, acc = model.evaluate(test_data,test_labels)
+    print("Test Loss: " + str(loss) + " Test Acc: " + str(acc))
     # save the model
-    model.save("model_" + datetime.now().strftime("%m%d%Y%H%M%S%f") + ".h5")
+    model.save(os.getcwd() + "\\Trained_Models\\model_" + datetime.now().strftime("%m%d%Y%H%M%S_") + str(loss) + "_" + str(acc) + ".h5")
 
 else:
 
     model = 0
 
     # if the model is in not the current directory
-    while (model not in os.listdir(os.getcwd())):
+    while (model not in os.listdir(os.getcwd() + "\\Trained_Models\\")):
         
         # input the name of the model
         model = input("Input Model Name: ")

@@ -28,7 +28,7 @@ _Data Lead_
 _General Lead_
 
 **Richa Gadgil** - 
-_Natural Language Processing Lead_
+_General Lead_
 
 
 # Faculty Advisors

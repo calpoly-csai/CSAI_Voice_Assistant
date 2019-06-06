@@ -42,7 +42,7 @@ _Audio Processing_
 [**Dr. Franz Kurfess**](http://users.csc.calpoly.edu/~fkurfess/) -
 _Machine Learning_
 
-# Active Software Developers:
+# Active Developers:
 
 [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
 

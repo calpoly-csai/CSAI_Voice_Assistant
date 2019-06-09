@@ -24,11 +24,15 @@ _iOS Development Lead_
 [**Michael Fekadu**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/michael_fekadu_profile.html) - 
 _Data Lead_
 
+[**John Waidhofer**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/john_waidhofer_profile.html) - _Web Development Lead_
+
+**Richa Gadgil** - 
+_Natural Language Processing Lead_
+
 **Nathan Irwin** - 
 _General Lead_
 
-**Richa Gadgil** - 
-_General Lead_
+
 
 
 # Faculty Advisors
@@ -62,7 +66,7 @@ Samuel Sachnoff
 
 [**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html)
 
-[**John Waidhofer**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/john_waidhofer_profile.html)
+
 
 # Spring 2019: Wake Word
 

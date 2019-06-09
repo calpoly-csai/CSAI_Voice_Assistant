@@ -21,7 +21,7 @@ _Software Lead_
 **Ryan Elliot** - 
 _iOS Development Lead_
 
-**Michael Fekadu** - 
+[**Michael Fekadu**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/michael_fekadu_profile.html) - 
 _Data Lead_
 
 **Nathan Irwin** - 

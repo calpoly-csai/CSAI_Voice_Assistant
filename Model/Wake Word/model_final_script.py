@@ -8,9 +8,12 @@ from speechpy.feature import mfcc
 from datetime import datetime 
 import wave
 import random 
+from pydub import AudioSegment
+from pydub.playback import play
 
-NWW_PATH = "C:\\Users\\cej17\\Documents\\Coding_Projects\\rand\\Not Wake Word\\"
-JSON_PATH = "C:\\Users\\cej17\\Documents\\Coding_Projects\\rand\\"
+song = AudioSegment.from_wav("tessa_hello.wav")
+NWW_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\Wake Word\\Not Wake Word\\"
+JSON_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\Wake Word\\"
 
 # NWW_PATH = 'C:\\Users\\cej17\\Documents\\CSAI\\CSAI_Voice_Assistant\\Data\\Wake Word\\Not Wake Word'
 # JSON_PATH = "C:\\Users\\cej17\Documents\\CSAI\\CSAI_Voice_Assistant\\Data\\Wake Word
@@ -24,7 +27,7 @@ NWW_TEST = "Not_Wake_Word_Test_data.json"
 CONFIDENCE = 0.6 # prediction confidence 
 GRU_UNITS = 20 # GRU unit size
 DROPOUT = 0.3 # dropout size
-ACTIVATIONS = 3 # number of activations for confident activation
+ACTIVATIONS = 5 # number of activations for confident activation
 EPOCHS = 30 # number of fwd and bckwd props
 BATCH_SIZE = 32 # batch size
 
@@ -229,6 +232,7 @@ while True:
     
     # appends chunk to frame list
     frames.append(data)
+    print("("+str(act_count)+")", end = "", flush=True)
 
     # begins making predictions after the first 2.5 seconds of audio is read
     if (len(frames) > 19):
@@ -252,7 +256,7 @@ while True:
 
             # if the number of consecutive activations exceeds the activation value
             if(act_count >= ACTIVATIONS):
-
+                play(song)
                 # print out "NIMBUS"
                 print("NIMBUS",end=" ",flush=True)
                 
@@ -271,6 +275,7 @@ while True:
                     wf.writeframes(b''.join(frames[:19]))
                     wf.close()
                     print("\n<<" + file_name + ">> has been saved\n")
+                test = input("paused")
 
         # if prediction falls below the confidence level                
         else:
@@ -279,7 +284,7 @@ while True:
             act_count = 0
 
             # output nothing to the stream
-            print(" ", end = "", flush=True)
+            print(".", end = "", flush=True)
 
         # window the data stream
         frames = frames[1:]

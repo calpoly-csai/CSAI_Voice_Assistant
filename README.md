@@ -32,20 +32,6 @@ _Natural Language Processing Lead_
 **Nathan Irwin** - 
 _General Lead_
 
-
-
-
-# Faculty Advisors
-
-[**Dr. Fooad Khosmood**](http://users.csc.calpoly.edu/~foaad/) -
-_Natural Language Processing/Machine Learning_
-
-[**Dr. Wayne Pilkington**](http://www.ee.calpoly.edu/faculty/wpilking/) - 
-_Audio Processing_
-
-[**Dr. Franz Kurfess**](http://users.csc.calpoly.edu/~fkurfess/) -
-_Machine Learning_
-
 # Active Developers:
 
 [**Kalen Goo**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
@@ -65,6 +51,20 @@ Samuel Sachnoff
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
 [**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html)
+
+
+
+
+# Faculty Advisors
+
+[**Dr. Fooad Khosmood**](http://users.csc.calpoly.edu/~foaad/) -
+_Natural Language Processing/Machine Learning_
+
+[**Dr. Wayne Pilkington**](http://www.ee.calpoly.edu/faculty/wpilking/) - 
+_Audio Processing_
+
+[**Dr. Franz Kurfess**](http://users.csc.calpoly.edu/~fkurfess/) -
+_Machine Learning_
 
 
 

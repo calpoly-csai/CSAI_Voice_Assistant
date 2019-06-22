@@ -64,9 +64,6 @@ _Audio Processing_
 [**Dr. Franz Kurfess**](http://users.csc.calpoly.edu/~fkurfess/) -
 _Machine Learning_
 
-# Project Progress
-![alt text](https://raw.githubusercontent.com/calpoly-csai/CSAI_Voice_Assistant/master/Images/progress_without_title.png)
-
 # Spring 2019: Wake Word
 
 **Wake Word Phase Developers:** [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), [Tyler Herzog](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_herzog_profile.html), [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), Brett Nelson, [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), [Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html), [Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html), [Cameron Toy](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html),  [John Waidhofer](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/john_waidhofer_profile.html)
@@ -89,3 +86,6 @@ Applying the NLP layer and optimizing to make accurate queries for accurate pred
 Finalzing the NLP layer and implementing Google Cloud Platform Speech-To-Text and Text-To-Speech. The hardware and mobile application design will occur to complete the project for the end-to-end product.
 
  
+
+# Project Progress
+![alt text](https://raw.githubusercontent.com/calpoly-csai/CSAI_Voice_Assistant/master/Images/progress_without_title.png)

@@ -64,7 +64,8 @@ _Audio Processing_
 [**Dr. Franz Kurfess**](http://users.csc.calpoly.edu/~fkurfess/) -
 _Machine Learning_
 
-
+# Project Progress
+![alt text](https://raw.githubusercontent.com/calpoly-csai/CSAI_Voice_Assistant/master/Images/progress_without_title.png)
 
 # Spring 2019: Wake Word
 

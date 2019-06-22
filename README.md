@@ -88,4 +88,4 @@ Finalzing the NLP layer and implementing Google Cloud Platform Speech-To-Text an
  
 
 # Project Progress
-![alt text](https://raw.githubusercontent.com/calpoly-csai/CSAI_Voice_Assistant/master/Images/progress_without_title.png)
+![alt text](https://github.com/calpoly-csai/CSAI_Voice_Assistant/blob/master/Images/project_progress.png)

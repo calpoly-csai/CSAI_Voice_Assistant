@@ -12,12 +12,16 @@ from pydub import AudioSegment
 from pydub.playback import play
 
 song = AudioSegment.from_wav("tessa_hello.wav")
-NWW_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\Wake Word\\Not Wake Word\\"
-JSON_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\Wake Word\\"
-
-# NWW_PATH = 'C:\\Users\\username\\Documents\\CSAI\\CSAI_Voice_Assistant\\Data\\Wake Word\\Not Wake Word'
-# JSON_PATH = "C:\\Users\\username\Documents\\CSAI\\CSAI_Voice_Assistant\\Data\\Wake Word
-
+NWW_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\ \
+            Wake Word\\Not Wake Word\\"
+JSON_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\ \
+            Wake Word\\"
+'''
+NWW_PATH = "C:\\Users\\username\\Documents\\CSAI\\CSAI_Voice_Assistant\\
+            Data\\Wake Word\\Not Wake Word"
+JSON_PATH = "C:\\Users\\username\Documents\\CSAI\\CSAI_Voice_Assistant\\
+            Data\\Wake Word
+'''
 # Name of json data files
 WW_TRAIN = "Wake_Word_Train_data.json"
 NWW_TRAIN = "Not_Wake_Word_Train_data.json"
@@ -49,13 +53,15 @@ def build_model():
     model = models.Sequential()
 
     # Add first layer which is the GRU
-    model.add(layers.GRU(GRU_UNITS, activation='linear', input_shape=(46, 13), dropout=DROPOUT, name='net'))
+    model.add(layers.GRU(GRU_UNITS, activation='linear', input_shape=(46, 13),
+                         dropout=DROPOUT, name='net'))
 
     # Add second layer which is a output for binary classification
     model.add(layers.Dense(1, activation='sigmoid'))
 
     # Define loss and optimzer fns
-    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='adam', loss='binary_crossentropy',
+                  metrics=['accuracy'])
     return model
 
 p = pyaudio.PyAudio()
@@ -136,7 +142,8 @@ if read == "y":
     train_data = np.array(train_data, dtype=float)
 
     # Train the model
-    model.fit(train_data, train_labels, epochs=EPOCHS, batch_size=BATCH_SIZE, verbose=1)
+    model.fit(train_data, train_labels, epochs=EPOCHS,
+              batch_size=BATCH_SIZE, verbose=1)
 
     # Evaluate the model with the test data
     print(model.evaluate(test_data, test_labels))
@@ -159,7 +166,8 @@ else:
 print(model.summary())
 
 # Open an audio data stream
-stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
+stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE,
+                input=True, frames_per_buffer=CHUNK)
 
 # Contains the chunks of streamed data
 frames = []
@@ -180,7 +188,8 @@ while not(false_act == "y" or false_act == "n"):
         description = input("Type of False Activation: ")
 
         while not(noise == 'q' or noise == 'm' or noise == 'l'):
-            noise = input("Noise Level - Quiet (Q) Moderate (M) Loud (L): ").lower()
+            noise = input("Noise Level - Quiet(Q) Moderate(M) \
+                          Loud(L): ").lower()
 print()
 
 while True:
@@ -198,7 +207,8 @@ while True:
         in_data = np.fromstring(np.array(frames[:19]), 'Int16')
 
         # Extract MFCCs from the 19 chunks of audio
-        audio_sig = np.array([mfcc(in_data, RATE, WINDOW, STRIDE, MFCC, FILTER_BANKS, FFT_NUM, 0, None, True)])
+        audio_sig = np.array([mfcc(in_data, RATE, WINDOW, STRIDE, MFCC,
+                                   FILTER_BANKS, FFT_NUM, 0, None, True)])
 
         # Makes predictions
         prediction = model.predict(audio_sig)
@@ -211,7 +221,8 @@ while True:
             # Increment the activation counter
             act_count += 1
 
-            # If the number of consecutive activations exceeds the activation value
+            # If the number of consecutive activations
+            # exceeds the activation value
             if(act_count >= ACTIVATIONS):
                 play(song)
                 # Print out "NIMBUS"
@@ -224,7 +235,11 @@ while True:
                 if(false_act == "y"):
 
                     # Store the wav
-                    file_name = "notww_" + description + "-false_" + location + "_" + noise + "_" + datetime.now().strftime("%m%d%Y%H%M%S%f") + "_ku.wav"
+                    file_name = (
+                        "notww_" + description + "-false_" +
+                        location + "_" + noise + "_" +
+                        datetime.now().strftime("%m%d%Y%H%M%S%f") + "_ku.wav"
+                    )
                     wf = wave.open(os.path.join(NWW_PATH, file_name), 'wb')
                     wf.setnchannels(CHANNELS)
                     wf.setsampwidth(p.get_sample_size(FORMAT))

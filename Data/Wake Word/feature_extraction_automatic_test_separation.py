@@ -18,7 +18,8 @@ PERCENT_TRAIN = 80  # Percent of sample to designate for training
 
 
 def Convert_To_MFCC(wf):
-        return mfcc(Read_Audio_Data(wf), RATE, WINDOW, STRIDE, MFCC, FILTER_BANKS, FFT_NUM, 0, None, True).tolist()
+        return mfcc(Read_Audio_Data(wf), RATE, WINDOW, STRIDE, MFCC,
+                    FILTER_BANKS, FFT_NUM, 0, None, True).tolist()
 
 
 def Read_Audio_Data(wf):
@@ -73,12 +74,15 @@ def Obtain_Audio_Data(data_inp):
             wf = wave.open(audio_dir + sample, 'rb')
 
             # Randomly put data into test/training dictionaries
-            if (wf.getnchannels() == 1 and wf.getsampwidth() == 2 and wf.getframerate() == RATE):
+            if (wf.getnchannels() == 1 and wf.getsampwidth() == 2 and
+                    wf.getframerate() == RATE):
                 rand = random.randint(1, 101)
                 if (rand <= PERCENT_TRAIN):
-                    curr_data_train[sample.replace(".wav", "")] = Convert_To_MFCC(wf)
+                    curr_data_train[sample.replace(".wav", "")] = \
+                        Convert_To_MFCC(wf)
                 else:
-                    curr_data_test[sample.replace(".wav", "")] = Convert_To_MFCC(wf)
+                    curr_data_test[sample.replace(".wav", "")] = \
+                        Convert_To_MFCC(wf)
             else:
                 print("<<" + sample + ">> is of invalid format.")
 

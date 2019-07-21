@@ -19,7 +19,7 @@ JSON_PATH = "C:\\Users\\Jason Ku\\Downloads\\CSAI_Voice_Assistant\\Data\\ \
 '''
 NWW_PATH = "C:\\Users\\username\\Documents\\CSAI\\CSAI_Voice_Assistant\\
             Data\\Wake Word\\Not Wake Word"
-JSON_PATH = "C:\\Users\\username\Documents\\CSAI\\CSAI_Voice_Assistant\\
+JSON_PATH = "C:\\Users\\username\\Documents\\CSAI\\CSAI_Voice_Assistant\\
             Data\\Wake Word
 '''
 # Name of json data files

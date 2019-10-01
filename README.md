@@ -29,14 +29,13 @@ _Data Lead_
 **Richa Gadgil** - 
 _Natural Language Processing Lead_
 
-**Nathan Irwin** - 
-_General Lead_
+[**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Information Infrastructure Lead_
+
+[**Tyler Herzog**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_herzog_profile.html) - _Hardware Lead_
 
 # Active Developers:
 
 [**Kalen Goo**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
-
-[**Tyler Herzog**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_herzog_profile.html)
 
 [**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
@@ -48,7 +47,6 @@ _General Lead_
 
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
-[**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html)
 
 
 

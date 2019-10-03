@@ -26,7 +26,7 @@ _Data Lead_
 
 [**John Waidhofer**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/john_waidhofer_profile.html) - _Web Development Lead_
 
-**Richa Gadgil**(http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/richa_gadgil_profile.html) - _Natural Language Processing Lead_
+[**Richa Gadgil**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/richa_gadgil_profile.html) - _Natural Language Processing Lead_
 
 [**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Information Infrastructure Lead_
 

@@ -250,7 +250,7 @@ class False_Activation:
         self.false_counts += 1
 
         # store the wav
-        file_name = "notww_%s-false_%s_%s_%s.wav"
+        file_name = "notww_%s-false_%s_%s_%s.wav" \
                     % (self.description,
                        self.location,
                        datetime.now().strftime("%m%d%y%H%M%S_"),

@@ -230,8 +230,8 @@ class Model:
 
         accuracy = int(((self.history.history['acc'])[self.EPOCHS-1])*100)
 
-        model_name = self.REPO_PATH + "\\Model\\Wake Word\\Models\\ww_model_" +
-                        datetime.now().strftime("%m%d%Y%H%M%S_") +
+        model_name = self.REPO_PATH + "\\Model\\Wake Word\\Models\\ww_model_" + \
+                        datetime.now().strftime("%m%d%Y%H%M%S_") + \
                         str(accuracy) + ".h5"
 
         self.model.save(model_name)

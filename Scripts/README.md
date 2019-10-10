@@ -1,4 +1,52 @@
-# Nimbus False Activation Detection
+# Audio Data Recording
+
+To obtain audio data for the wake word, please view the audio recording script ```Audio_Data_Recording.py```
+To run this program, you must ensure that you have the following:
+
+1. Python 3.x
+2. Pyaudio (python -m pip install pyaudio)
+3. Wave (pip install wave)
+
+Also, modifications to the script need to be made. 
+
+1. At line 19 of ```Audio_Data_Recording.py```, you must replace None with a string of YOUR last name. 
+   Ex: Replace None with "ewenike"
+  
+2. If you are not using Windows, you must change the double backslashs in line 118 to single forward slashes.
+   Ex: wf = wave.open("%s\\Data\\%s\\%s" % (PATH...... to wf = wave.open("%s/Data/%s/%s" % (PATH......
+   
+After these modifications, your program should run. Be sure to follow the spec description guidelines in the Data/WakeWord directory for correct labeling. 
+
+# Train Model
+
+Train_Model.py simply trains a model by obtaining the data within the Wake Word and Not Wake Word directories. Data will be converted to MFCCs using the Feature Extraction class and read into the WW Model class. The program will then either train a new model and retrain existing models.
+
+If you would like to retrain existing models, simply make them arguments when running Train_Model.py. 
+
+```python Train_Model.py /Path/To/Model.h5```
+
+If no arguments are passed, the program will train a new model. 
+
+The resulting model will be saved in Model/Wake Word/Models 
+
+
+# False Positives Detection Live
+
+False Positives Detection Live will make predictions on real-time audio and save any audio streams that cause activation. The purpose is to catch audio that causes false activation. The false positive audio will then be stored in the Not Wake Word directory of the Data directory. 
+
+Caution: Ensure the wake word is NOT spoken during this time. Such will cause false negatives when training on not wake word data that is the actual wake word.
+
+## Usage
+
+This program requires that a pretrained model is input ```-i```. A location ```-l``` and a label description ```-d``` are also required to label the audio data. Once the desired number of false activations occur ```-n```(default = 4), the program will retrain a new model. Such is done by running the following:
+
+```python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss -n 7``` 
+
+There are additional features for the user. The user can retrain on the same model ```-r```. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument.
+
+```python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss -n 7 -p -a 10 -r```
+
+# False Positives Detection File
 
 This script take audio file(s) that presumably do not contain the wake word
 ("Nimbus"), perform prediction on every 2.432s frame with .128s strides, and
@@ -11,7 +59,7 @@ install ffmpeg with "brew install ffmpeg" if you have homebrew installed, or
 download it from https://ffmpeg.org. Other prereqs are python libraries and can
 be installed with "pip install library".
 
-Usage:  python false_pos_detect.py model source target_dir [name]
+Usage:  python False_Positives_Detection_File.py model source target_dir [name]
 Where:  model is a HDF5 dump of the model you're training on.
         source is an audio file or a directory (the script will recursively go
             through the tree and ignore non-audio files)

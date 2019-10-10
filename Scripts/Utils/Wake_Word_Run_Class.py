@@ -45,10 +45,10 @@ FFT_NUM = 512  # length of fast fourier transform window
 
 class Run_Wake_Word:
 
-    def __init__(self, print_pred, input_model=None, confidence=CONFIDENCE, 
-                 activations=ACTIVATIONS, chunk=CHUNK, 
-                 format=FORMAT, channels=CHANNELS, rate=RATE, window=WINDOW, 
-                 stride=STRIDE, mfcc=MFCC, filter_banks=FILTER_BANKS, 
+    def __init__(self, print_pred, input_model=None, confidence=CONFIDENCE,
+                 activations=ACTIVATIONS, chunk=CHUNK,
+                 format=FORMAT, channels=CHANNELS, rate=RATE, window=WINDOW,
+                 stride=STRIDE, mfcc=MFCC, filter_banks=FILTER_BANKS,
                  fft_num=FFT_NUM):
 
         self.input_model = input_model
@@ -168,4 +168,3 @@ class Run_Wake_Word:
             print(prediction)
 
         return prediction
-

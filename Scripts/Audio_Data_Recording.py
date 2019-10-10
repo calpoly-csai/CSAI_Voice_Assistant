@@ -13,7 +13,14 @@ import os
 import time
 import winsound
 
-with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
+if(os.name == "nt"):
+    delim = "\\"
+
+else:
+    delim = "/"
+
+
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim,delim), "r") as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 USER_NAME = "ewenike"
@@ -129,8 +136,10 @@ while (quit_inp != 'q'):
 
             # Store the audio in the "Data/Target directory"
             # <<FOR LINUX OR MAC OS, REPLACE \\ with />>
-            wf = wave.open("%s\\Data\\WakeWord\\Audio\\%s\\%s" %
-                           (REPO_PATH, target_dir, file_name), 'wb')
+            wf = wave.open("%s%sData%sWakeWord%sAudio%s%s%s%s" %
+                           (REPO_PATH, delim, delim, delim, delim, \
+                            target_dir, delim, file_name), 'wb')
+
 
             wf.setnchannels(CHANNELS)
             wf.setsampwidth(p.get_sample_size(FORMAT))

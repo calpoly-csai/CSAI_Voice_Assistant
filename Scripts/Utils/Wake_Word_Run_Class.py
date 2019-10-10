@@ -1,13 +1,10 @@
-"""
-Title: False Activation Extractor
+'''
+Name: Run Wake Word Class
 Author: Chidi Ewenike
-Date: 07/15/2019
+Date: 10/10/2019
 Organization: Cal Poly CSAI
-Description: Class which detects and stores false activations predicted
-             by a model
-
-"""
-
+Description: Class for detecting the wake word of live audio stream
+'''
 
 # Imports
 # =============================================================================
@@ -31,14 +28,8 @@ with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
 
 # Constants
 # =============================================================================
-LAST_NAME = "ewenike"
-
-NWW_PATH = REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\"
-
 CONFIDENCE = 0.6  # prediction confidence
 ACTIVATIONS = 4  # number of activations for confident activation
-
-FALSE_COUNT = 4
 
 CHUNK = 2048
 FORMAT = pyaudio.paInt16
@@ -52,21 +43,15 @@ FILTER_BANKS = 20  # number of filter banks to compute
 FFT_NUM = 512  # length of fast fourier transform window
 
 
-class False_Activation:
+class Run_Wake_Word:
 
-    def __init__(self, location, print_pred, description, input_model=None,
-                 false_count=FALSE_COUNT, retrain=False, last_name=LAST_NAME,
-                 nww_path=NWW_PATH, confidence=CONFIDENCE,
-                 activations=ACTIVATIONS, chunk=CHUNK, format=FORMAT,
-                 channels=CHANNELS, rate=RATE, window=WINDOW, stride=STRIDE,
-                 mfcc=MFCC, filter_banks=FILTER_BANKS, fft_num=FFT_NUM):
+    def __init__(self, print_pred, input_model=None, confidence=CONFIDENCE, 
+                 activations=ACTIVATIONS, chunk=CHUNK, 
+                 format=FORMAT, channels=CHANNELS, rate=RATE, window=WINDOW, 
+                 stride=STRIDE, mfcc=MFCC, filter_banks=FILTER_BANKS, 
+                 fft_num=FFT_NUM):
 
         self.input_model = input_model
-        self.location = location
-        self.description = description
-        self.false_count = false_count
-        self.last_name = last_name
-        self.nww_path = nww_path
         self.confidence = confidence
         self.activations = activations
         self.chunk = chunk
@@ -81,7 +66,6 @@ class False_Activation:
         self.print_pred = print_pred
         self.p = pyaudio.PyAudio()
         self.ww_model = Model()
-        self.retrain = retrain
 
         self.model = self.ww_model.load(self.input_model)
 
@@ -89,12 +73,9 @@ class False_Activation:
 
         self.stream = None
         self.frames = []
-        self.false_files = []
         self.act_count = 0
-        self.false_count = FALSE_COUNT
-        self.false_counts = 0
 
-    def Run_Extraction(self):
+    def Run_Detection(self):
         """
         Runs the false extraction on the input stream
 
@@ -145,12 +126,7 @@ class False_Activation:
                         # reset activation count
                         act_count = 0
 
-                        self.False_Activation()
-
                         self.frames = self.frames[18:]
-
-                    if (self.false_counts >= self.false_count):
-                        self.Retrain_Model()
 
                 # if prediction falls below the confidence level
                 else:
@@ -160,52 +136,10 @@ class False_Activation:
 
                     if not(self.print_pred):
                         # output nothing to the stream
-                        print("-", end="", flush=True)
+                        print(".", end="", flush=True)
 
                 # window the data stream
                 self.frames = self.frames[1:]
-
-    def Retrain_Model(self):
-        """
-        Retrains a Model object model with the new false wake word data
-
-        Args:
-            None
-
-        Returns:
-            None
-
-        """
-
-        self.stream.close()
-
-        random.shuffle(self.false_files)
-
-        for files in self.false_files[:self.false_count - 1]:
-            os.rename(REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\" +
-                      files, REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake"
-                      " Word\\Train_Data\\" + files)
-
-        os.rename(REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\" +
-                  self.false_files[self.false_count - 1], REPO_PATH +
-                  "\\Data\\WakeWord\\Audio\\Not Wake Word\\Test_Data\\" +
-                  self.false_files[self.false_count - 1])
-
-        self.false_counts = 0
-        self.false_files = []
-        self.ext_feat.Obtain_WW_Audio_Data()
-
-        if not(self.retrain):
-            self.ww_model = Model()
-            self.ww_model.build_model()
-
-        self.ww_model.preprocess()
-        self.ww_model.train_model()
-
-        self.stream = self.p.open(format=self.format,
-                                  channels=self.channels,
-                                  rate=self.rate, input=True,
-                                  frames_per_buffer=self.chunk)
 
     def Prediction(self):
         """
@@ -235,33 +169,3 @@ class False_Activation:
 
         return prediction
 
-    def False_Activation(self):
-        """
-        Saves the input byte buffer as a wav file
-
-        Args:
-            None
-
-        Returns:
-            None
-
-        """
-        # if false activation occurs in false activation mode
-        self.false_counts += 1
-
-        # store the wav
-        file_name = "notww_%s-false_%s_%s_%s.wav" \
-                    % (self.description,
-                       self.location,
-                       datetime.now().strftime("%m%d%y%H%M%S_"),
-                       self.last_name)
-
-        wf = wave.open(os.path.join(self.nww_path, file_name), 'wb')
-        wf.setnchannels(self.channels)
-        wf.setsampwidth(self.p.get_sample_size(self.format))
-        wf.setframerate(self.rate)
-        wf.writeframes(b''.join(self.frames[:19]))
-        wf.close()
-        print("\n<<" + file_name + ">> has been saved\n")
-
-        self.false_files.append(file_name)

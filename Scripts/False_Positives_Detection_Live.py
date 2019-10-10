@@ -20,8 +20,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-i',
                     action="store",
                     required=True,
-                    help="Input Model to Detect False Activations",
-                    default=4)
+                    help="Input Model to Detect False Activations")
 parser.add_argument('-r',
                     action="store_true",
                     required=False,
@@ -41,7 +40,8 @@ parser.add_argument('-p',
 parser.add_argument('-n',
                     action="store",
                     required=False,
-                    help="Number of false activations before train")
+                    help="Number of false activations before train",
+                    default=4)
 parser.add_argument('-a',
                     action="store",
                     required=False,

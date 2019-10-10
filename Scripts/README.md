@@ -29,6 +29,19 @@ If no arguments are passed, the program will train a new model.
 
 The resulting model will be saved in Model/Wake Word/Models 
 
+# Awaken NIMBUS
+
+Awaken NIMBUS will make predictions on real-time and output <<nimbus>> on consecutive positive activations ```-a```.
+
+## Usage
+
+This program requires that a pretrained model is input ```-i
+```python False_Positives_Detection_Live.py -i /Path/To/Model.h5``` 
+
+There are additional features for the user. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument.
+
+```python False_Positives_Detection_Live.py -i /Path/To/Model. -p -a 10 ```
+
 
 # False Positives Detection Live
 

@@ -20,7 +20,8 @@ else:
     delim = "/"
 
 
-with open(os.getcwd() + "%sUtils%sPATH.json" % (delim,delim), "r") as path_json:
+with open(os.getcwd() + "%sUtils%sPATH.json" %
+          (delim, delim), "r") as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 USER_NAME = "ewenike"
@@ -137,9 +138,8 @@ while (quit_inp != 'q'):
             # Store the audio in the "Data/Target directory"
             # <<FOR LINUX OR MAC OS, REPLACE \\ with />>
             wf = wave.open("%s%sData%sWakeWord%sAudio%s%s%s%s" %
-                           (REPO_PATH, delim, delim, delim, delim, \
+                           (REPO_PATH, delim, delim, delim, delim,
                             target_dir, delim, file_name), 'wb')
-
 
             wf.setnchannels(CHANNELS)
             wf.setsampwidth(p.get_sample_size(FORMAT))

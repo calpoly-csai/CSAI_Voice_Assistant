@@ -89,6 +89,9 @@ class Feature_Extraction:
                      'Wake Word%sTrain_Data' % delim,
                      'Wake Word%sTest_Data' % delim]
 
+        ww_data = {}
+        nww_data = {}
+
         for data_inp in data_dirs:
             # desired dir for data extraction
             audio_dir = REPO_PATH + AUDIO_PATH + delim + data_inp + delim
@@ -134,6 +137,12 @@ class Feature_Extraction:
                         mfcc = self.Convert_To_MFCC(wf)
                         curr_data[sample.replace(".wav", "")] = mfcc
 
+            if "Not Wake Word" in data_inp:
+                nww_data.update(curr_data)
+
+            else:
+                ww_data.update(curr_data)
+
             # place contents into the json
             with open(REPO_PATH + "%sData%sWakeWord%sMFCC%s%s" %
                     (delim, delim, delim, delim, json_type), "w") as outfile:
@@ -141,3 +150,17 @@ class Feature_Extraction:
 
             print("<<" + json_type + ">> has been stored in"
                   "the directory: " + str(os.getcwd()))
+
+        with open(REPO_PATH + "%sData%sWakeWord%sMFCC%sww_data.json" %
+                (delim, delim, delim, delim), "w") as outfile:
+            json.dump(ww_data, outfile)
+
+        print("<<ww_data.json>> has been stored")
+
+
+        with open(REPO_PATH + "%sData%sWakeWord%sMFCC%snww_data.json" %
+                (delim, delim, delim, delim), "w") as outfile:
+            json.dump(nww_data, outfile)
+
+        print("<<nww_data.json>> has been stored.")
+

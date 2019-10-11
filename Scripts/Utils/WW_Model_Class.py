@@ -44,6 +44,8 @@ class Model:
         self.NWW_TRAIN = "Not Wake Word_Train_data.json"
         self.WW_TEST = "Wake Word_Test_data.json"
         self.NWW_TEST = "Not Wake Word_Test_data.json"
+        self.WW_DATA = "ww_data.json"
+        self.NWW_DATA = "nww_data.json"
 
         self.CONFIDENCE = 0.6  # prediction confidence
         self.GRU_UNITS = 64  # GRU unit size
@@ -62,6 +64,17 @@ class Model:
         self.nww_test_data_keys = []
         self.nww_train_data = {}
         self.nww_train_data_keys = []
+
+        self.ww_data = {}
+        self.ww_data_keys = []
+        self.ww_data = {}
+        self.ww_data_keys = []
+
+        # not wake word train & test data with shuffled list of keys
+        self.nww_data = {}
+        self.nww_data_keys = []
+        self.nww_data = {}
+        self.nww_data_keys = []
 
         # input list of training & test data and labels
         self.train_data = []
@@ -107,6 +120,88 @@ class Model:
         self.model.compile(optimizer='adam',
                            loss='binary_crossentropy',
                            metrics=['acc'])
+
+    def randomized_preprocess(self):
+        """
+        Preprocesses the MFCCs and labels corresponding
+        audio with WW/NWW labels
+
+        Args:
+            self - The current object
+
+        Returns:
+            None
+
+        """
+
+        # open the JSON from the path containing the data JSON
+        with open(os.path.join(self.JSON_PATH, self.WW_DATA)) as f_in:
+
+            # load the data from the json into a dict
+            self.ww_data = json.load(f_in)
+
+            # obtain list of keys
+            self.ww_data_keys = list(self.ww_data.keys())
+
+            # shuffle the list
+            random.shuffle(self.ww_data_keys)
+
+        # open the JSON from the path containing the data JSON
+        with open(os.path.join(self.JSON_PATH, self.NWW_DATA)) as f_in:
+
+            # load the data from the json into a dict
+            self.nww_data = json.load(f_in)
+
+            # obtain list of keys
+            self.nww_data_keys = list(self.nww_data.keys())
+
+            # shuffle the list
+            random.shuffle(self.nww_data_keys)
+
+        # iterate through the list of ww train keys
+        for i in range(int(len(self.ww_data_keys)*0.8)):
+
+            # hash into the dict and store it in the input list
+            self.train_data.append(self.ww_data[
+                self.ww_data_keys[i]])
+
+            # label the corresponding data
+            self.train_labels.append(1)
+
+        # iterate through the list of nww train keys
+        for i in range(int(len(self.nww_data_keys)*0.8)):
+
+            # hash into the dict and store it in the input list
+            self.train_data.append(self.nww_data[
+                self.nww_data_keys[i]])
+
+            # label the corresponding data
+            self.train_labels.append(0)
+
+        # iterate through the list of ww test keys
+        for i in range(int(len(self.ww_data_keys)*0.8), len(self.ww_data_keys)):
+
+            # hash into the dict and store it in the input list
+            self.test_data.append(self.ww_data[self.ww_data_keys[i]])
+
+            # label the corresponding data
+            self.test_labels.append(1)
+
+        # iterate through the list of nww test keys
+        for i in range(int(len(self.nww_data_keys)*0.8), len(self.nww_data_keys)):
+
+            # hash into the dict and store it in the input list
+            self.test_data.append(self.nww_data[
+                self.nww_data_keys[i]])
+
+            # label the corresponding data
+            self.test_labels.append(0)
+
+        # convert the data lists to np arrays of type float
+        self.test_data = np.array(self.test_data, dtype=float)
+        self.train_data = np.array(self.train_data, dtype=float)
+        self.test_labels = np.array(self.test_labels, dtype=float)
+        self.train_labels = np.array(self.train_labels, dtype=float)
 
     def preprocess(self):
         """

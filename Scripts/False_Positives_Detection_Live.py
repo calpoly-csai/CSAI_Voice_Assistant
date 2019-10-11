@@ -51,6 +51,10 @@ parser.add_argument('-a',
                     required=False,
                     default=4,
                     help="Number of predictions for an activation")
+parser.add_argument('--rand',
+                    action="store_true",
+                    required=False,
+                    help="Randomize training and test data")
 
 args = parser.parse_args()
 
@@ -78,7 +82,9 @@ def main():
                                         retrain=args.r,
                                         location=args.l,
                                         description=args.d,
-                                        print_pred=args.p)
+                                        print_pred=args.p,
+                                        randomize=args.rand
+                                        )
 
     false_activation.Run_Extraction()
 

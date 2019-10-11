@@ -32,13 +32,18 @@ After these modifications, your program should run. Be sure to follow the spec d
 
 Train_Model.py simply trains a model by obtaining the data within the Wake Word and Not Wake Word directories. Data will be converted to MFCCs using the Feature Extraction class and read into the WW Model class. The program will then either train a new model and retrain existing models.
 
-If you would like to retrain existing models, simply make them arguments when running Train_Model.py. 
+If you would like to retrain existing models, simply make them arguments when running Train_Model.py with the ```-i```. 
 
-```python Train_Model.py /Path/To/Model.h5```
+```python Train_Model.py -i /Path/To/Model.h5```
 
-If no arguments are passed, the program will train a new model. 
+If no ```-i``` argument is passed, the program will train a new model. 
 
 The resulting model will be saved in Model/Wake Word/Models 
+
+To train on a completely random set of train and test data, input the ```--rand``` argument.
+
+```python Train_Model.py --rand```
+
 
 # Awaken NIMBUS
 
@@ -66,7 +71,11 @@ This program requires that a pretrained model is input ```-i```. A location ```-
 
 ```python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss -n 7``` 
 
-There are additional features for the user. The user can retrain on the same model ```-r```. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument.
+To train on a randomized set of train and test data, use the ```rand``` argument.
+
+```python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss --rand``` 
+
+There are additional features for the user. The user can retrain on the same model ```-r```. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument. 
 
 ```python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss -n 7 -p -a 10 -r```
 

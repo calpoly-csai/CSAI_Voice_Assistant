@@ -60,7 +60,8 @@ FFT_NUM = 512  # length of fast fourier transform window
 
 class False_Activation:
 
-    def __init__(self, location, print_pred, description, input_model=None,
+    def __init__(self, location, print_pred, description, randomize,
+                 input_model=None,
                  false_count=FALSE_COUNT, retrain=False, last_name=LAST_NAME,
                  nww_path=NWW_PATH, confidence=CONFIDENCE,
                  activations=ACTIVATIONS, chunk=CHUNK, format=FORMAT,
@@ -88,6 +89,7 @@ class False_Activation:
         self.p = pyaudio.PyAudio()
         self.ww_model = Model()
         self.retrain = retrain
+        self.randomize = randomize
 
         self.model = self.ww_model.load(self.input_model)
 
@@ -197,7 +199,8 @@ class False_Activation:
 
         os.rename(Path_To + self.false_files[self.false_count - 1],
                 "%s%sTest_Data%s%s" %
-                (Path_To, delim, delim,self.false_files[self.false_count - 1]))
+                (Path_To, delim, delim,
+                 self.false_files[self.false_count - 1]))
 
         self.false_counts = 0
         self.false_files = []
@@ -207,7 +210,12 @@ class False_Activation:
             self.ww_model = Model()
             self.ww_model.build_model()
 
-        self.ww_model.preprocess()
+        if not(self.randomize):
+            self.ww_model.preprocess()
+
+        else:
+            self.ww_model.randomized_preprocess()
+
         self.ww_model.train_model()
 
         self.stream = self.p.open(format=self.format,

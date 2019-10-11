@@ -6,6 +6,7 @@ Organization: Cal Poly CSAI
 Description: The class for the model architecture and training
 
 """
+from Utils.OS_Find import Path_OS_Assist
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import os
@@ -29,10 +30,14 @@ class Model:
 
         """
 
-        with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
+        self.delim = Path_OS_Assist()
+
+        with open(os.getcwd() + "%sUtils%sPATH.json" % (self.delim, \
+            self.delim), "r") as path_json:
             self.REPO_PATH = json.load(path_json)["PATH"]
 
-        self.JSON_PATH = self.REPO_PATH + "\\Data\\WakeWord\\MFCC\\"
+        self.JSON_PATH = self.REPO_PATH + "%sData%sWakeWord%sMFCC%s" % \
+                (self.delim, self.delim, self.delim, self.delim)
 
         # name of json data files
         self.WW_TRAIN = "Wake Word_Train_data.json"
@@ -230,9 +235,10 @@ class Model:
 
         accuracy = int(((self.history.history['acc'])[self.EPOCHS-1])*100)
 
-        model_name = self.REPO_PATH + "\\Model\\Wake Word\\Models\\ww_" \
-            "model_" + datetime.now().strftime("%m%d%Y%H%M%S_") + \
-            str(accuracy) + ".h5"
+        model_name = "%s%sModel%sWake Word%sModels%sww_" \
+            "model_%s_%s.h5" % (self.REPO_PATH, self.delim, self.delim, 
+            self.delim, self.delim, datetime.now().strftime("%m%d%Y%H%M%S_"), 
+            str(accuracy)) 
 
         self.model.save(model_name)
         print("%s has been saved." % model_name)

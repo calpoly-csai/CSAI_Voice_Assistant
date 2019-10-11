@@ -15,6 +15,7 @@ import pyaudio
 import tensorflow as tf
 from tensorflow.keras import models, layers
 from Utils.Feature_Extraction_Class import Feature_Extraction
+from Utils.OS_Find import Path_OS_Assist
 import json
 import numpy as np
 import os
@@ -26,14 +27,19 @@ import random
 from Utils.WW_Model_Class import Model
 import argparse
 
-with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
+
+delim = Path_OS_Assist()
+
+with open(os.getcwd() + "%sUtils%sPATH.json" %
+          (delim, delim), "r") as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 # Constants
 # =============================================================================
 LAST_NAME = "ewenike"
 
-NWW_PATH = REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\"
+NWW_PATH = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+           (delim, delim, delim, delim, delim)
 
 CONFIDENCE = 0.6  # prediction confidence
 ACTIVATIONS = 4  # number of activations for confident activation
@@ -181,15 +187,17 @@ class False_Activation:
 
         random.shuffle(self.false_files)
 
-        for files in self.false_files[:self.false_count - 1]:
-            os.rename(REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\" +
-                      files, REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake"
-                      " Word\\Train_Data\\" + files)
+        Path_To = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+        (delim, delim, delim, delim, delim)
 
-        os.rename(REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\" +
-                  self.false_files[self.false_count - 1], REPO_PATH +
-                  "\\Data\\WakeWord\\Audio\\Not Wake Word\\Test_Data\\" +
-                  self.false_files[self.false_count - 1])
+        for files in self.false_files[:self.false_count - 1]:
+            os.rename(Path_To + files, "%s%sTrain_Data%s%s" %
+            (Path_To, delim, delim, files)
+            )
+
+        os.rename(Path_To + self.false_files[self.false_count - 1],
+                "%s%sTest_Data%s%s" %
+                (Path_To, delim, delim,self.false_files[self.false_count - 1]))
 
         self.false_counts = 0
         self.false_files = []
@@ -256,7 +264,7 @@ class False_Activation:
                        datetime.now().strftime("%m%d%y%H%M%S_"),
                        self.last_name)
 
-        wf = wave.open(os.path.join(self.nww_path, file_name), 'wb')
+        wf = wave.open(self.nww_path + file_name, 'wb')
         wf.setnchannels(self.channels)
         wf.setsampwidth(self.p.get_sample_size(self.format))
         wf.setframerate(self.rate)

@@ -7,6 +7,7 @@ Description: Class that extracts and saves MFCCs
 
 '''
 
+from Utils.OS_Find import Path_OS_Assist
 import pyaudio
 import wave
 import numpy as np
@@ -23,10 +24,12 @@ MFCC = 13  # number of desired MFCCs
 FILTER_BANKS = 20  # number of filter banks to compute
 FFT_NUM = 512  # length of fast fourier transform window
 
-with open(os.getcwd() + "\\Utils\\PATH.json", "r") as PATH_JSON:
+delim = Path_OS_Assist()
+
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") as PATH_JSON:
     REPO_PATH = json.load(PATH_JSON)["PATH"]
 
-AUDIO_PATH = "\\Data\\WakeWord\\Audio\\"
+AUDIO_PATH = "%sData%sWakeWord%sAudio" % (delim, delim, delim)
 
 
 class Feature_Extraction:
@@ -81,21 +84,21 @@ class Feature_Extraction:
         Return:
             None
         '''
-        data_dirs = ['Not Wake Word\\Train_Data',
-                     'Not Wake Word\\Test_Data',
-                     'Wake Word\\Train_Data',
-                     'Wake Word\\Test_Data']
+        data_dirs = ['Not Wake Word%sTrain_Data' % delim,
+                     'Not Wake Word%sTest_Data' % delim,
+                     'Wake Word%sTrain_Data' % delim,
+                     'Wake Word%sTest_Data' % delim]
 
         for data_inp in data_dirs:
             # desired dir for data extraction
-            audio_dir = REPO_PATH + AUDIO_PATH + data_inp + "\\"
+            audio_dir = REPO_PATH + AUDIO_PATH + delim + data_inp + delim
 
             # obtain files within the dir
             audio_list = os.listdir(audio_dir)
 
-            word = data_inp.split("\\")[0]
+            word = data_inp.split(delim)[0]
 
-            type_of_data = data_inp.split("\\")[1]
+            type_of_data = data_inp.split(delim)[1]
 
             # name of the json file based on user input
             json_type = word + "_" + type_of_data + ".json"
@@ -132,8 +135,8 @@ class Feature_Extraction:
                         curr_data[sample.replace(".wav", "")] = mfcc
 
             # place contents into the json
-            with open(REPO_PATH + "\\Data\\WakeWord\\MFCC\\"
-                      + json_type, 'w') as outfile:
+            with open(REPO_PATH + "%sData%sWakeWord%sMFCC%s%s" %
+                    (delim, delim, delim, delim, json_type), "w") as outfile:
                 json.dump(curr_data, outfile)
 
             print("<<" + json_type + ">> has been stored in"

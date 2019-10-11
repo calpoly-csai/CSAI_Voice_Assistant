@@ -7,12 +7,16 @@ Description: Detects the wake word of live audio stream
 '''
 
 from Utils.Wake_Word_Run_Class import Run_Wake_Word
+from Utils.OS_File import Path_OS_Assist
 import argparse
 import os
 import pyaudio
 import json
 
-with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
+delim = Path_OS_Assist()
+
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") \
+        as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 parser = argparse.ArgumentParser()

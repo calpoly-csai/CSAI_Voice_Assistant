@@ -7,13 +7,17 @@ Description: Runs false activations on input data
 
 """
 
+from Utils.OS_Find import Path_OS_Assist
 from Utils.False_Activation_Extractor_Class import False_Activation
 import argparse
 import os
 import pyaudio
 import json
 
-with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
+delim = Path_OS_Assist()
+
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") \
+        as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 parser = argparse.ArgumentParser()
@@ -52,7 +56,8 @@ args = parser.parse_args()
 
 LAST_NAME = "ewenike"
 
-NWW_PATH = REPO_PATH + "\\Data\\WakeWord\\Audio\\Not Wake Word\\"
+NWW_PATH = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+           (delim, delim, delim, delim, delim)
 
 CONFIDENCE = 0.6  # prediction confidence
 ACTIVATIONS = args.a  # number of activations for confident activation

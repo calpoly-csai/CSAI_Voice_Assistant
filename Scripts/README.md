@@ -1,3 +1,14 @@
+To run these programs, you must ensure that you have the following:
+
+1. Python 3.x
+2. Pyaudio (python -m pip install pyaudio)
+3. Wave (pip install wave)
+
+All programs need to be run from the Scripts directory. Programs will not run otherwise.
+
+Also, you need to ensure that the path to the CSAI Voice Assistant repository is in the Scripts/Utils/READ.json. To do so, simply run 
+AddPath.py and insert the path there. All the programs run based on this path. 
+
 # Audio Data Recording
 
 To obtain audio data for the wake word, please view the audio recording script ```Audio_Data_Recording.py```

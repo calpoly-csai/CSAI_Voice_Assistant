@@ -12,13 +12,9 @@ import pyaudio
 import os
 import time
 import winsound
+from Utils.OS_Find import Path_OS_Assist
 
-if(os.name == "nt"):
-    delim = "\\"
-
-else:
-    delim = "/"
-
+delim = Path_OS_Assist()
 
 with open(os.getcwd() + "%sUtils%sPATH.json" %
           (delim, delim), "r") as path_json:

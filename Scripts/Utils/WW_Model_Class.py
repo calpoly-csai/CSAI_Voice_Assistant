@@ -349,4 +349,4 @@ class Model:
             None
 
         """
-        self.model = models.load_model(os.getcwd() + model_name)
+        self.model = models.load_model(model_name)

@@ -46,6 +46,7 @@ _Data Lead_
 
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
+**Allen Deng**
 
 
 
@@ -89,4 +90,4 @@ Finalzing the NLP layer and implementing Google Cloud Platform Speech-To-Text an
  
 
 # Project Progress
-![alt text](https://github.com/calpoly-csai/CSAI_Voice_Assistant/blob/master/Images/project_progress.png)
+![alt text](https://raw.githubusercontent.com/calpoly-csai/CSAI_Voice_Assistant/master/Misc/Images/project_progress_10.12.png)

@@ -22,8 +22,11 @@ import wave
 import random
 from Utils.WW_Model_Class import Model
 import argparse
+from Utils.OS_Find import Path_OS_Assist
 
-with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
+delim = Path_OS_Assist()
+
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 # Constants

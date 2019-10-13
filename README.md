@@ -46,6 +46,7 @@ _Data Lead_
 
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
+**Allen Deng**
 
 
 

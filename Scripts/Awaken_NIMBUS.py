@@ -7,7 +7,7 @@ Description: Detects the wake word of live audio stream
 '''
 
 from Utils.Wake_Word_Run_Class import Run_Wake_Word
-from Utils.OS_File import Path_OS_Assist
+from Utils.OS_Find import Path_OS_Assist
 import argparse
 import os
 import pyaudio

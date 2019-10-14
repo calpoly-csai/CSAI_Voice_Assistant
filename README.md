@@ -34,21 +34,35 @@ _Data Lead_
 
 # Active Developers:
 
+**Jacob Burghgraef**
+
+**Tyler Campanile**
+
+**Daniel DeFoe**
+
+**Allen Deng**
+
 [**Kalen Goo**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
 
-[**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
+**Karshin Gupta**
 
-[**Brett Nelson**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/brett_nelson_profile.html)
+**Yale Hone**
+
+[**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
 [**Viet Nguyen**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html)
 
 [**Kevin Nottberg**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html)
 
+**Adam Perlin**
+
+**Brandon Pragasa**
+
+**Shubham Sengar**
+
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
-**Allen Deng**
-
-
+**Kush Upadhyay**
 
 
 # Faculty Advisors

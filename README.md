@@ -48,6 +48,8 @@ _Data Lead_
 
 **Yale Hone**
 
+**Eden Hoover**
+
 [**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
 [**Viet Nguyen**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html)

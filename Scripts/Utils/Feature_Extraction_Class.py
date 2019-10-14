@@ -84,10 +84,10 @@ class Feature_Extraction:
         Return:
             None
         '''
-        data_dirs = ['Not Wake Word%sTrain_Data' % delim,
-                     'Not Wake Word%sTest_Data' % delim,
-                     'Wake Word%sTrain_Data' % delim,
-                     'Wake Word%sTest_Data' % delim]
+        data_dirs = ['Not_Wake_Word%sTrain_Data' % delim,
+                     'Not_Wake_Word%sTest_Data' % delim,
+                     'Wake_Word%sTrain_Data' % delim,
+                     'Wake_Word%sTest_Data' % delim]
 
         ww_data = {}
         nww_data = {}

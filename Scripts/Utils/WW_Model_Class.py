@@ -6,14 +6,16 @@ Organization: Cal Poly CSAI
 Description: The class for the model architecture and training
 
 """
-from Utils.OS_Find import Path_OS_Assist
-import tensorflow as tf
-from tensorflow.keras import layers, models
-import os
 import json
-import numpy as np
+import os
 import random
+
+import numpy as np
+import tensorflow as tf
+
 from datetime import datetime
+from tensorflow.keras import layers, models
+from Utils.OS_Find import Path_OS_Assist
 
 
 class Model:
@@ -32,12 +34,12 @@ class Model:
 
         self.delim = Path_OS_Assist()
 
-        with open(os.getcwd() + "%sUtils%sPATH.json" % (self.delim, \
-            self.delim), "r") as path_json:
+        with open(os.getcwd() + "%sUtils%sPATH.json" %
+                  (self.delim, self.delim), "r") as path_json:
             self.REPO_PATH = json.load(path_json)["PATH"]
 
         self.JSON_PATH = self.REPO_PATH + "%sData%sWakeWord%sMFCC%s" % \
-                (self.delim, self.delim, self.delim, self.delim)
+            (self.delim, self.delim, self.delim, self.delim)
 
         # name of json data files
         self.WW_TRAIN = "Wake_Word_Train_data.json"
@@ -179,7 +181,8 @@ class Model:
             self.train_labels.append(0)
 
         # iterate through the list of ww test keys
-        for i in range(int(len(self.ww_data_keys)*0.8), len(self.ww_data_keys)):
+        for i in range(int(len(self.ww_data_keys)*0.8),
+                       len(self.ww_data_keys)):
 
             # hash into the dict and store it in the input list
             self.test_data.append(self.ww_data[self.ww_data_keys[i]])
@@ -188,7 +191,8 @@ class Model:
             self.test_labels.append(1)
 
         # iterate through the list of nww test keys
-        for i in range(int(len(self.nww_data_keys)*0.8), len(self.nww_data_keys)):
+        for i in range(int(len(self.nww_data_keys)*0.8),
+                       len(self.nww_data_keys)):
 
             # hash into the dict and store it in the input list
             self.test_data.append(self.nww_data[
@@ -331,9 +335,10 @@ class Model:
         accuracy = int(((self.history.history['acc'])[self.EPOCHS-1])*100)
 
         model_name = "%s%sModel%sWake Word%sModels%sww_" \
-            "model_%s_%s.h5" % (self.REPO_PATH, self.delim, self.delim, 
-            self.delim, self.delim, datetime.now().strftime("%m%d%Y%H%M%S_"), 
-            str(accuracy)) 
+            "model_%s_%s.h5" % (self.REPO_PATH, self.delim, self.delim,
+                                self.delim, self.delim,
+                                datetime.now().strftime("%m%d%Y%H%M%S_"),
+                                str(accuracy))
 
         self.model.save(model_name)
         print("%s has been saved." % model_name)

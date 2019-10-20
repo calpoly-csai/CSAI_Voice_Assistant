@@ -8,25 +8,27 @@ Description: Class for detecting the wake word of live audio stream
 
 # Imports
 # =============================================================================
-import pyaudio
-import tensorflow as tf
-from tensorflow.keras import models, layers
-from Utils.Feature_Extraction_Class import Feature_Extraction
+import argparse
 import json
-import numpy as np
 import os
 import pyaudio
-from speechpy.feature import mfcc
-from datetime import datetime
-import wave
 import random
-from Utils.WW_Model_Class import Model
-import argparse
+import wave
+
+import numpy as np
+import tensorflow as tf
+
+from datetime import datetime
+from speechpy.feature import mfcc
+from tensorflow.keras import models, layers
+from Utils.Feature_Extraction_Class import Feature_Extraction
 from Utils.OS_Find import Path_OS_Assist
+from Utils.WW_Model_Class import Model
 
 delim = Path_OS_Assist()
 
-with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") as path_json:
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") \
+        as path_json:
     REPO_PATH = json.load(path_json)["PATH"]
 
 # Constants

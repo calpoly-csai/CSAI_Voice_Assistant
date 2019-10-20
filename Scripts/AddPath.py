@@ -13,13 +13,13 @@ from Utils.OS_Find import Path_OS_Assist
 
 
 def main():
-    path = ""  # path string
-    confirm = ""  # confirms
+    path = ""  # Path string
+    confirm = ""  # Confirms
     path_json = {}
     delim = Path_OS_Assist()
 
     while (path == ""):
-        temp = input("Enter the path to the CSAI_Voice_Assistant repository"
+        temp = input("Enter the path to the CSAI_Voice_Assistant repository "
                      "in your local machine: ")
 
         while not(confirm.lower() == "n" or confirm.lower() == "y"):
@@ -36,7 +36,7 @@ def main():
     with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "w") \
             as in_json:
         json.dump(path_json, in_json)
-        print("Path %s has been added to Utils/PATH.json. If an error has"
+        print("Path %s has been added to Utils/PATH.json. If an error has "
               "occurred, you can run the program again and reinsert the path")
 
 

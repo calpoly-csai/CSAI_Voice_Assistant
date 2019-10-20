@@ -14,7 +14,8 @@ def mp3_to_wav(mp3_file_name, wav_file_name):
     set at the top of this file.
     """
     sound = AudioSegment.from_mp3(mp3_file_name)
-    sound = sound.set_frame_rate(RATE).set_channels(CHANNELS).set_sample_width(FORMAT)
+    sound = sound.set_frame_rate(RATE).set_channels(CHANNELS) \
+        .set_sample_width(FORMAT)
     sound.export(wav_file_name, format="wav")
 
 
@@ -29,13 +30,14 @@ def split_wav(sound_length, wav_file_name, wav_split_prefix):
     """
     split_index = 0
     t1 = 0
-    t2 =  sound_length * 1000   # indexed in milliseconds, multiply by 1000
+    t2 = sound_length * 1000  # indexed in milliseconds, multiply by 1000
     sound = AudioSegment.from_wav(wav_file_name)
 
     # keep adding splits of file until the end is reached
     while t2 < len(sound):
         split = sound[t1:t2]
-        split.export("{}_split_{}.wav".format(wav_split_prefix, split_index), format="wav")
+        split.export("{}_split_{}.wav".format(wav_split_prefix, split_index),
+                     format="wav")
 
         # shift split times forward by sound_length
         t1 += sound_length * 1000

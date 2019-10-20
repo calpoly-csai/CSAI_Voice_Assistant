@@ -7,11 +7,12 @@
 # =============================================================================
 
 import json
-import wave
-import pyaudio
 import os
+import pyaudio
 import time
+import wave
 import winsound
+
 from Utils.OS_Find import Path_OS_Assist
 
 delim = Path_OS_Assist()

@@ -8,13 +8,15 @@ Description: This script take audio file(s) that do not contain the wake word
              activate the model.
 """
 
-from pydub import AudioSegment
-import numpy as np
-from speechpy.feature import mfcc
-import wave
-import sys
 import os
+import sys
+import wave
+
+import numpy as np
+
 from datetime import datetime
+from pydub import AudioSegment
+from speechpy.feature import mfcc
 try:
     from keras import models
 except ImportError:
@@ -62,7 +64,7 @@ class FalsePosDetect:
             audio = AudioSegment.from_file(path, sample_width=SAMPLE_WIDTH,
                                            channels=NUM_CHANNELS,
                                            frame_rate=SAMPLE_RATE)
-        except:
+        except:  # nopep8
             print("Not a valid audio file: %s" % (path))
             return
         # Validate audio file, return FPD object if valid.

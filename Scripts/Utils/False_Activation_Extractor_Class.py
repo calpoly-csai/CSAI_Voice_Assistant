@@ -11,21 +11,22 @@ Description: Class which detects and stores false activations predicted
 
 # Imports
 # =============================================================================
+import argparse
+import json
+import os
 import pyaudio
+import random
+import wave
+
+import numpy as np
 import tensorflow as tf
+
+from datetime import datetime
+from speechpy.feature import mfcc
 from tensorflow.keras import models, layers
 from Utils.Feature_Extraction_Class import Feature_Extraction
 from Utils.OS_Find import Path_OS_Assist
-import json
-import numpy as np
-import os
-import pyaudio
-from speechpy.feature import mfcc
-from datetime import datetime
-import wave
-import random
 from Utils.WW_Model_Class import Model
-import argparse
 
 
 delim = Path_OS_Assist()
@@ -190,17 +191,16 @@ class False_Activation:
         random.shuffle(self.false_files)
 
         Path_To = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
-        (delim, delim, delim, delim, delim)
+            (delim, delim, delim, delim, delim)
 
         for files in self.false_files[:self.false_count - 1]:
             os.rename(Path_To + files, "%s%sTrain_Data%s%s" %
-            (Path_To, delim, delim, files)
-            )
+                      (Path_To, delim, delim, files))
 
         os.rename(Path_To + self.false_files[self.false_count - 1],
-                "%s%sTest_Data%s%s" %
-                (Path_To, delim, delim,
-                 self.false_files[self.false_count - 1]))
+                  "%s%sTest_Data%s%s" %
+                  (Path_To, delim, delim,
+                   self.false_files[self.false_count - 1]))
 
         self.false_counts = 0
         self.false_files = []

@@ -7,14 +7,16 @@ Description: Class that extracts and saves MFCCs
 
 '''
 
-from Utils.OS_Find import Path_OS_Assist
-import pyaudio
-import wave
-import numpy as np
-import os
-from speechpy.feature import mfcc
 import json
+import os
+import pyaudio
 import sys
+import wave
+
+import numpy as np
+
+from speechpy.feature import mfcc
+from Utils.OS_Find import Path_OS_Assist
 
 # CONSTANTS
 RATE = 16000  # sample rate
@@ -26,7 +28,8 @@ FFT_NUM = 512  # length of fast fourier transform window
 
 delim = Path_OS_Assist()
 
-with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") as PATH_JSON:
+with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "r") \
+        as PATH_JSON:
     REPO_PATH = json.load(PATH_JSON)["PATH"]
 
 AUDIO_PATH = "%sData%sWakeWord%sAudio" % (delim, delim, delim)
@@ -145,22 +148,20 @@ class Feature_Extraction:
 
             # place contents into the json
             with open(REPO_PATH + "%sData%sWakeWord%sMFCC%s%s" %
-                    (delim, delim, delim, delim, json_type), "w") as outfile:
+                      (delim, delim, delim, delim, json_type), "w") as outfile:
                 json.dump(curr_data, outfile)
 
             print("<<" + json_type + ">> has been stored in"
                   "the directory: " + str(os.getcwd()))
 
         with open(REPO_PATH + "%sData%sWakeWord%sMFCC%sww_data.json" %
-                (delim, delim, delim, delim), "w") as outfile:
+                  (delim, delim, delim, delim), "w") as outfile:
             json.dump(ww_data, outfile)
 
         print("<<ww_data.json>> has been stored")
 
-
         with open(REPO_PATH + "%sData%sWakeWord%sMFCC%snww_data.json" %
-                (delim, delim, delim, delim), "w") as outfile:
+                  (delim, delim, delim, delim), "w") as outfile:
             json.dump(nww_data, outfile)
 
         print("<<nww_data.json>> has been stored.")
-

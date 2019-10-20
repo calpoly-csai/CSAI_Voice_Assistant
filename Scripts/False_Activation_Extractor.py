@@ -7,11 +7,12 @@ Description: Runs false activations on input data
 
 """
 
-from Utils.False_Activation_Extractor_Class import False_Activation
 import argparse
 import os
 import pyaudio
 import json
+
+from Utils.False_Activation_Extractor_Class import False_Activation
 
 with open(os.getcwd() + "\\Utils\\PATH.json", "r") as path_json:
     REPO_PATH = json.load(path_json)["PATH"]

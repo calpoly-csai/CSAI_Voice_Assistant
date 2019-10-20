@@ -71,11 +71,11 @@ while (quit_inp != 'q'):
                 wf.setframerate(RATE)
                 print("Recording in 3..")
                 time.sleep(1)
-                print("             2..")
+                print("            2..")
                 time.sleep(1)
                 print("             1..")
                 time.sleep(1)
-                end_time = time.perf_counter() + 2.5
+                end_time = time.perf_counter() + 10
                 stream = p.open(rate = RATE,
                                 format = FORMAT, 
                                 input = True,

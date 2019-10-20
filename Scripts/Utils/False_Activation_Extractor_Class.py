@@ -193,8 +193,8 @@ class False_Activation:
         (delim, delim, delim, delim, delim)
 
         for files in self.false_files[:self.false_count - 1]:
-            os.rename(Path_To + files, "%s%sTrain_Data%s%s" %
-            (Path_To, delim, delim, files)
+            os.rename(Path_To + files, "%sTrain_Data%s%s" %
+            (Path_To, delim, files)
             )
 
         os.rename(Path_To + self.false_files[self.false_count - 1],

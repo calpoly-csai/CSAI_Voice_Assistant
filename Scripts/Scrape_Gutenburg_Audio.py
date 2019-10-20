@@ -3,7 +3,7 @@ import requests
 import sys
 import os
 
-from Gutenburg_Wav_Util import mp3_to_wav, split_wav
+from Utils.Gutenburg_Wav_Util import mp3_to_wav, split_wav
 
 SOUND_LENGTH = 2.5      # length of each sound split
 

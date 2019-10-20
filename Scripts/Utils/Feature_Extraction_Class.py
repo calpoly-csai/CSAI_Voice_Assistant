@@ -137,7 +137,7 @@ class Feature_Extraction:
                         mfcc = self.Convert_To_MFCC(wf)
                         curr_data[sample.replace(".wav", "")] = mfcc
 
-            if "Not Wake Word" in data_inp:
+            if "Not_Wake_Word" in data_inp:
                 nww_data.update(curr_data)
 
             else:

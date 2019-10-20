@@ -38,7 +38,7 @@ with open(os.getcwd() + "%sUtils%sPATH.json" %
 # =============================================================================
 LAST_NAME = "ewenike"
 
-NWW_PATH = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+NWW_PATH = REPO_PATH + "%sData%sWakeWord%sAudio%sNot_Wake_Word%s" % \
            (delim, delim, delim, delim, delim)
 
 CONFIDENCE = 0.6  # prediction confidence
@@ -189,7 +189,7 @@ class False_Activation:
 
         random.shuffle(self.false_files)
 
-        Path_To = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+        Path_To = REPO_PATH + "%sData%sWakeWord%sAudio%sNot_Wake_Word%s" % \
         (delim, delim, delim, delim, delim)
 
         for files in self.false_files[:self.false_count - 1]:

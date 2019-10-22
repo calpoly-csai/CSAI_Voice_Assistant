@@ -33,10 +33,9 @@ MAX_SPEED = 2
 DURATION = NUMCHUNKS * CHUNK_SIZE / SAMPLE_RATE
 
 
-
 class AudioAugmenter:
     """ A wrapper for raw audio that provides methods to augment the audio
-       
+
         The purpose is to artificially create new data. Every augmentation
         method returns an AudioAugmenter, which allows for chaining.
     """
@@ -52,7 +51,7 @@ class AudioAugmenter:
             self.dtype = 'int%d' % (self.sample_width * 8)
         elif raw_bytes is not None:
             self.raw_bytes = raw_bytes
-    
+
             self.sample_width = sample_width
             self.sample_rate = sample_rate
             self.num_channels = num_channels
@@ -98,17 +97,16 @@ class AudioAugmenter:
             valid = False
         return valid
 
-
     def pad(self, target_duration=DURATION, mode='random'):
         """Pad the audio to a target length"""
         if mode not in ('head', 'tail', 'symmetric', 'random'):
             raise ValueError("Padding mode must be 'head', 'tail', "
                              "'symmetric', or 'random'")
-    
+
         padding_len = target_duration * 1000 - len(self.audio)
         if padding_len < 0:
             raise ValueError("Input audio is longer than target")
-    
+
         if mode == 'head':
             head_len = padding_len
         elif mode == 'tail':
@@ -119,12 +117,11 @@ class AudioAugmenter:
             head_len = random.randrange(padding_len + 1)
 
         new_audio = (AudioSegment.silent(duration=head_len,
-                                    frame_rate=self.sample_rate)
+                                         frame_rate=self.sample_rate)
                      + self.audio
                      + AudioSegment.silent(duration=padding_len - head_len,
                                            frame_rate=self.sample_rate))
         return AudioAugmenter(audio=new_audio)
-
 
     def change_pitch(self, shift_amount=None):
         """Change the audio pitch"""
@@ -132,12 +129,12 @@ class AudioAugmenter:
             shift_amount = random.randrange(-300, 300)
         fr = 100
         sz = self.sample_rate // fr
-        c = len(self.raw_bytes) // self.sample_width  // sz
+        c = len(self.raw_bytes) // self.sample_width // sz
         shift = shift_amount // fr
         interval = sz * self.sample_width
         aggregator = bytes()
         for num in range(c):
-            da = np.frombuffer(self.raw_bytes[num*interval : (num+1)*interval],
+            da = np.frombuffer(self.raw_bytes[num*interval: (num+1)*interval],
                                dtype=np.int16)
             left, right = da[0::2], da[1::2]
             lf, rf = np.fft.rfft(left), np.fft.rfft(right)
@@ -197,13 +194,13 @@ class DataGenerator:
                 augs.append(aug)
         return DataGenerator(augs)
 
-
     def from_bytes(raw_bytes_list):
         return DataGenerator([AudioAugmenter(raw_bytes=raw_bytes)
                               for raw_bytes in raw_bytes_list])
 
     def __next__(self):
-        aug = random.choice(self.original_augs).speed_up().change_pitch().add_noise().pad()
+        aug = (random.choice(self.original_augs).speed_up().change_pitch()
+               .add_noise().pad())
         return aug.raw_bytes
         sample = (
             np.array(mfcc(np.frombuffer(aug.raw_bytes, dtype='int%d'

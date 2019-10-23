@@ -34,7 +34,8 @@ Train_Model.py simply trains a model by obtaining the data within the Wake Word 
 
 If you would like to retrain existing models, simply make them arguments when running Train_Model.py with the ```-i```. 
 
-```bash python Train_Model.py -i /Path/To/Model.h5```
+```bash 
+python Train_Model.py -i /Path/To/Model.h5```
 
 If no ```-i``` argument is passed, the program will train a new model. 
 
@@ -42,7 +43,8 @@ The resulting model will be saved in Model/Wake Word/Models
 
 To train on a completely random set of train and test data, input the ```--rand``` argument.
 
-```bash python Train_Model.py --rand```
+```bash 
+python Train_Model.py --rand```
 
 
 # Awaken NIMBUS
@@ -52,11 +54,13 @@ Awaken NIMBUS will make predictions on real-time and output <<nimbus>> on consec
 ## Usage
 
 This program requires that a pretrained model is input ```-i
-```bash python False_Positives_Detection_Live.py -i /Path/To/Model.h5``` 
+```bash 
+python False_Positives_Detection_Live.py -i /Path/To/Model.h5``` 
 
 There are additional features for the user. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument.
 
-```bash python False_Positives_Detection_Live.py -i /Path/To/Model. -p -a 10 ```
+```bash 
+python False_Positives_Detection_Live.py -i /Path/To/Model. -p -a 10 ```
 
 
 # False Positives Detection Live
@@ -77,7 +81,8 @@ To train on a randomized set of train and test data, use the ```rand``` argument
 
 There are additional features for the user. The user can retrain on the same model ```-r```. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument. 
 
-```bash python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss -n 7 -p -a 10 -r```
+```bash 
+python False_Positives_Detection_Live.py -i /Path/To/Model.h5 -l Classroom -d serious-iss -n 7 -p -a 10 -r```
 
 # False Positives Detection File
 

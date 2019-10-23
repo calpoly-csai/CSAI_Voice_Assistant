@@ -45,7 +45,8 @@ The resulting model will be saved in Model/Wake Word/Models
 To train on a completely random set of train and test data, input the ```--rand``` argument.
 
 ```bash 
-python Train_Model.py --rand```
+python Train_Model.py --rand
+```
 
 
 # Awaken NIMBUS

@@ -39,7 +39,7 @@ with open(os.getcwd() + "%sUtils%sPATH.json" %
 # =============================================================================
 LAST_NAME = "ewenike"
 
-NWW_PATH = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+NWW_PATH = REPO_PATH + "%sData%sWakeWord%sAudio%sNot_Wake_Word%s" % \
            (delim, delim, delim, delim, delim)
 
 CONFIDENCE = 0.6  # prediction confidence

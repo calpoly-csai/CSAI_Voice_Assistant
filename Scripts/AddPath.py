@@ -13,8 +13,8 @@ from Utils.OS_Find import Path_OS_Assist
 
 
 def main():
-    path = ""  # Path string
-    confirm = ""  # Confirms
+    path = ""  # path string
+    confirm = ""  # confirms
     path_json = {}
     delim = Path_OS_Assist()
 

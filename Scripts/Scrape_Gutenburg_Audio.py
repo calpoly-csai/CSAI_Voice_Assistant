@@ -14,13 +14,13 @@ if len(sys.argv) < 2:
 
 # apropriate regexps for common gutenburg html forms
 regexps = [r'<li><a href="mp3-16bit\/(\d+)-(\d+)\.mp3">.*\.mp3<\/a>',
-            r'<li><a href="mp3-32bit\/(\d+)-(\d+)\.mp3">.*\.mp3<\/a>',
-            r'<li><a href="mp3\/(\d+)-(\d+)\.mp3">.*\.mp3<\/a>']
+           r'<li><a href="mp3-32bit\/(\d+)-(\d+)\.mp3">.*\.mp3<\/a>',
+           r'<li><a href="mp3\/(\d+)-(\d+)\.mp3">.*\.mp3<\/a>']
 
 # apropriate mp3 link string frames for common gutenburg html forms
 mp3_link_frames = ["https://www.gutenberg.org/files/{}/mp3-16bit/{}-{}.mp3",
-                    "https://www.gutenberg.org/files/{}/mp3-32bit/{}-{}.mp3",
-                    "https://www.gutenberg.org/files/{}/mp3/{}-{}.mp3"]
+                   "https://www.gutenberg.org/files/{}/mp3-32bit/{}-{}.mp3",
+                   "https://www.gutenberg.org/files/{}/mp3/{}-{}.mp3"]
 
 # process each link user provides
 for i in range(1, len(sys.argv)):
@@ -28,8 +28,9 @@ for i in range(1, len(sys.argv)):
 
     # send web request, get content
     r = requests.get(link)
-    if r.status_code != 200: # error response -> output code, skip to next link
-        print('error {} in web response... skipping link'.format(r.status_code))
+    if r.status_code != 200:  # error response -> output code, skip this link
+        print('error {} in web response... skipping link'
+              .format(r.status_code))
         continue
     # decode to ascii to run regex queries on
     content = r.content.decode('utf-8')
@@ -44,7 +45,7 @@ for i in range(1, len(sys.argv)):
             break
 
     # check for unrecognized html format
-    if mp3_link_frame == None:
+    if mp3_link_frame is None:
         print('unrecognized html format found... skipping link')
         continue
 
@@ -71,13 +72,16 @@ for i in range(1, len(sys.argv)):
         mp3_out = open(mp3_file_name, 'wb+')
 
         # format download link
-        download_link = mp3_link_frame.format(file_index, file_index, section_id)
+        download_link = mp3_link_frame.format(file_index,
+                                              file_index,
+                                              section_id)
 
         # send web request, get content
         mp3_response = requests.get(download_link)
         if mp3_response.status_code != 200:
             # error response given, print code and skip to next link
-            print('error {} in mp3 response... skipping file'.format(mp3_response.status_code))
+            print('error {} in mp3 response... skipping file'
+                  .format(mp3_response.status_code))
             continue
 
         # save mp3 file
@@ -86,7 +90,8 @@ for i in range(1, len(sys.argv)):
 
         # get file name and prefix for splits
         wav_file_name = "{}_{}.wav".format(file_index, file_section_index)
-        wav_split_prefix = "./{}/section_{:02d}".format(dir, file_section_index)
+        wav_split_prefix = "./{}/section_{:02d}".format(dir,
+                                                        file_section_index)
 
         # export mp3 file to a wav file
         mp3_to_wav(mp3_file_name, wav_file_name)

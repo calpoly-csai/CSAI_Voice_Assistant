@@ -7,12 +7,13 @@ Description: Runs false activations on input data
 
 """
 
-from Utils.OS_Find import Path_OS_Assist
-from Utils.False_Activation_Extractor_Class import False_Activation
 import argparse
 import os
 import pyaudio
 import json
+
+from Utils.OS_Find import Path_OS_Assist
+from Utils.False_Activation_Extractor_Class import False_Activation
 
 delim = Path_OS_Assist()
 

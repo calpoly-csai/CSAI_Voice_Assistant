@@ -7,12 +7,13 @@ Description: Trains the current wake word model on either new data
              or an existing model
 
 """
-from Utils.WW_Model_Class import Model
-import tensorflow
-from tensorflow import keras
-import sys
-from Utils.Feature_Extraction_Class import Feature_Extraction
 import argparse
+import sys
+import tensorflow
+
+from tensorflow import keras
+from Utils.Feature_Extraction_Class import Feature_Extraction
+from Utils.WW_Model_Class import Model
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i',

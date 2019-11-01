@@ -58,6 +58,8 @@ _Data Lead_
 
 **Adam Perlin**
 
+**Sai Pamidi**
+
 **Brandon Pragasa**
 
 **Shubham Sengar**

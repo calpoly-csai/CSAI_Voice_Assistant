@@ -42,7 +42,7 @@ while (quit_inp != 'q'):
 
     if (feat_type == "ww"):
 
-        target_dir = "Wake Word"  # used for setting the correct directory
+        target_dir = "Wake_Word"  # used for setting the correct directory
         ww_noise = 0
         first_name = input("First Name: ").lower()  # used for labeling file
         last_name = input("Last Name: ").lower()
@@ -62,7 +62,7 @@ while (quit_inp != 'q'):
                              "Moderate (M) Loud (L): ").lower()
 
     else:
-        target_dir = "Not Wake Word"
+        target_dir = "Not_Wake_Word"
         nww_noise = 0
         nww_descr = ((input("Enter description: ")).lower()).replace(" ", "-")
         nww_loc = (input("Location: ").lower()).replace(" ", "-")

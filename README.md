@@ -44,7 +44,7 @@ _Data Lead_
 
 [**Kalen Goo**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
 
-[**Karshin Gupta**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Karshin Gupta**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/karshin_gupta_profile.html)
 
 [**Yale Hone**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
@@ -58,13 +58,13 @@ _Data Lead_
 
 [**Adam Perlin**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-[**Sai Pamidi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Sai Pamidi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/sai_pamidi_profile.html)
 
 [**Shubham Sengar**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
-[**Kush Upadhyay**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Kush Upadhyay**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kush_upadhyay_profile.html)
 
 
 # Faculty Advisors

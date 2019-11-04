@@ -57,13 +57,13 @@ Awaken NIMBUS will make predictions on real-time and output <<nimbus>> on consec
 
 This program requires that a pretrained model is input ```-i
 ```bash 
-python False_Positives_Detection_Live.py -i /Path/To/Model.h5
+python Awaken_NIMBUS.py -i /Path/To/Model.h5
 ``` 
 
 There are additional features for the user. If the user would like the know the prediction score of each prediction, such can be done ```-p```. To modify the number of predictions for an activation, simply use the ```-a``` argument.
 
 ```bash 
-python False_Positives_Detection_Live.py -i /Path/To/Model. -p -a 10 
+python Awaken_NIMBUS.py -i /Path/To/Model. -p -a 10 
 ```
 
 

@@ -34,21 +34,21 @@ _Data Lead_
 
 # Active Developers:
 
-**Jacob Burghgraef**
+[**Jacob Burghgraef**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Tyler Campanile**
+[**Tyler Campanile**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Daniel DeFoe**
+[**Daniel DeFoe**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Allen Deng**
+[**Allen Deng**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
 [**Kalen Goo**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
 
-**Karshin Gupta**
+[**Karshin Gupta**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Yale Hone**
+[**Yale Hone**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Eden Hoover**
+[**Eden Hoover**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
 [**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
@@ -56,15 +56,15 @@ _Data Lead_
 
 [**Kevin Nottberg**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html)
 
-**Adam Perlin**
+[**Adam Perlin**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Sai Pamidi**
+[**Sai Pamidi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
-**Shubham Sengar**
+[**Shubham Sengar**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
-**Kush Upadhyay**
+[**Kush Upadhyay**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
 
 
 # Faculty Advisors

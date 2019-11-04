@@ -2,6 +2,8 @@
 
 #Added specifics for our voice assistant
 *.wav
+*.json
+*.h5
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

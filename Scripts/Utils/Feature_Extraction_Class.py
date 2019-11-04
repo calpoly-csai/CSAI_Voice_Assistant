@@ -109,22 +109,25 @@ class Feature_Extraction:
             # name of the json file based on user input
             json_type = word + "_" + type_of_data + ".json"
 
+            json_file = "%s%sData%sWakeWord%sMFCC%s%s" % \
+                    (REPO_PATH, delim, delim, delim, delim, json_type)
+
             # data dictionary
             curr_data = {}
 
             # if the file is not within the directory
-            if not(os.path.isfile(json_type)):
+            if not(os.path.isfile(json_file)):
 
                 # create the file
-                inp_file = open(json_type, 'w')
+                inp_file = open(json_file, 'w')
                 inp_file.close()
 
                 # add the dict to the json
-                with open(json_type, 'a') as outfile:
+                with open(json_file, 'a') as outfile:
                     json.dump(curr_data, outfile)
 
             # load the contents of the data json
-            with open(json_type) as f_in:
+            with open(json_file) as f_in:
                 curr_data = json.load(f_in)
 
             # obtain each audio sample from the desired dir

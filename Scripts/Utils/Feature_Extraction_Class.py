@@ -110,7 +110,7 @@ class Feature_Extraction:
             json_type = word + "_" + type_of_data + ".json"
 
             json_file = "%s%sData%sWakeWord%sMFCC%s%s" % \
-                    (REPO_PATH, delim, delim, delim, delim, json_type)
+                (REPO_PATH, delim, delim, delim, delim, json_type)
 
             # data dictionary
             curr_data = {}

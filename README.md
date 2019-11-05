@@ -34,21 +34,23 @@ _Data Lead_
 
 # Active Developers:
 
-[**Jacob Burghgraef**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Jacob Burghgraef**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jacob_burghgraef_profile.html)
 
-[**Tyler Campanile**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Tyler Campanile**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_campanile_profile.html)
 
-[**Daniel DeFoe**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Ben Dahlgren**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/ben_dahlgren_profile.html)
 
-[**Allen Deng**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Daniel DeFoe**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/daniel_defoe_profile.html)
+
+[**Allen Deng**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/allen_deng_profile.html)
 
 [**Kalen Goo**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html)
 
 [**Karshin Gupta**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/karshin_gupta_profile.html)
 
-[**Yale Hone**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Yale Hone**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/yale_hone_profile.html)
 
-[**Eden Hoover**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Eden Hoover**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/eden_hover_profile.html)
 
 [**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
@@ -56,11 +58,11 @@ _Data Lead_
 
 [**Kevin Nottberg**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html)
 
-[**Adam Perlin**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Adam Perlin**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/adam_perlin_profile.html)
 
 [**Sai Pamidi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/sai_pamidi_profile.html)
 
-[**Shubham Sengar**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
+[**Shubham Sengar**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/shubham_sengar_profile.html)
 
 [**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
@@ -95,8 +97,8 @@ Natural Language Processing data acquisition and optimization of the current wak
 
 # Fall 2019: Natural Language Processing Domain-Specific Implementation 
 
-**Natural Language Processing Phase Developers:** [Jacob Burghgraef](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/)
-, [Tyler Campanile](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/), [Daniel DeFoe](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/), [Allen Deng](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/), [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), [Yale Hone](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/), [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), [Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html), [Adam Perlin](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/), [Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
+**Natural Language Processing Phase Developers:** [Jacob Burghgraef](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jacob_burghgraef_profile.html)
+, [Tyler Campanile](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_campanile_profile.html), [Daniel DeFoe](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/daniel_defoe_profile.html), [Allen Deng](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/allen_deng_profile.html), [Kalen Goo](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kalen_goo_profile.html), [Yale Hone](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/yale_hone_profile.html), [Max Mohammadi](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html), [Viet Nguyen](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html), [Kevin Nottberg](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html), [Adam Perlin](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/adam_perlin_profile.html), [Austin Silveria](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
 Applying the NLP layer and optimizing to make accurate queries for accurate predictions. Also scripting a site scraping program to obtain necessary information and adding such information to a look-up table for future access.
 

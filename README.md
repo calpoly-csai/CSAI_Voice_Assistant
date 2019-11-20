@@ -2,7 +2,7 @@
 
 ![alt text](https://raw.githubusercontent.com/calpoly-csai/CSAI_Voice_Assistant/master/Misc/Images/CalPoly-CSAI_cpcsai_rectanglefilled.png)
 
-The "Cal Poly Computer Science & Artificial Intelligence" club is designing a voice assistant to provide the Cal Poly Computer Science department with relevant information about the department and university. The intent is for users to ask for information about the department such as professor's office hours & expertise, course prerequisites, etc. Users can also ask the assistant for general information about the university such as the history, mascott, and more.
+The "Cal Poly Computer Science & Artificial Intelligence" club is designing a voice assistant to provide the Cal Poly Computer Science department with relevant information about the department and university. The intent is for users to ask for information about the department such as professor's office hours & expertise, course prerequisites, etc. Users can also ask the assistant for general information about the university such as the history, mascott, and more. Our project team was awarded the "Google Cloud Platform Educational Grant" to fund the usage of server hosting, database management, and speech application needs.
 
 # Leads
 

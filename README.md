@@ -54,6 +54,8 @@ _Data Lead_
 
 [**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
+[**Taylor Nguyen**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/taylor_nguyen_profile.html)
+
 [**Viet Nguyen**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html)
 
 [**Kevin Nottberg**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kevin_nottberg_profile.html)
@@ -68,6 +70,7 @@ _Data Lead_
 
 [**Kush Upadhyay**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kush_upadhyay_profile.html)
 
+[**Henry Yin**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/henry_yin_profile.html)
 
 # Faculty Advisors
 

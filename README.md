@@ -34,6 +34,9 @@ _Data Lead_
 
 # Active Developers:
 
+
+[**Steven Bradley**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/steven_bradley_profile.html)
+
 [**Jacob Burghgraef**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jacob_burghgraef_profile.html)
 
 [**Tyler Campanile**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_campanile_profile.html)

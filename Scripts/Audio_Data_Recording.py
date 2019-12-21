@@ -136,7 +136,7 @@ def main(username):
                 wf.setnchannels(CHANNELS)
                 wf.setsampwidth(p.get_sample_size(FORMAT))
                 wf.setframerate(RATE)
-                wf.writeframes(''.join(frames))
+                wf.writeframes(b''.join(frames))
                 wf.close()
 
             end_desc_sess = input("If finished with description session, "

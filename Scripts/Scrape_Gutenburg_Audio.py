@@ -25,8 +25,8 @@ def main(args):
                        "https://www.gutenberg.org/files/{}/mp3/{}-{}.mp3"]
 
     # process each link user provides
-    for i in range(1, len(sys.argv)):
-        link = sys.argv[i]
+    for i in range(1, len(args)):
+        link = args[i]
 
         # send web request, get content
         r = requests.get(link)

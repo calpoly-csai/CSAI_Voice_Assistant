@@ -6,11 +6,11 @@ import os
 from Utils.Gutenburg_Wav_Util import mp3_to_wav, split_wav
 
 
-def main():
+def main(args):
     SOUND_LENGTH = 2.5      # length of each sound split
 
     # check for correct number of arguments
-    if len(sys.argv) < 2:
+    if len(args) < 2:
         print('Usage: scrape_gutenburg_audio.py <audio_book_index_file_link>...')
         sys.exit(0)
 
@@ -108,4 +108,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv)

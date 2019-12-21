@@ -30,7 +30,7 @@ def main(username):
         REPO_PATH = json.load(path_json)["PATH"]
 
     while (quit_inp != 'q'):
-        feat_type = 0  # wake or not wake work label
+        feat_type = 0  # wake or not wake word label
         gender = 0  # gender label
         end_desc_sess = 0  # ends the current description session
 
@@ -84,8 +84,8 @@ def main(username):
             time.sleep(1)
 
             # Starts the audio stream
-            stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True,
-                            output=True, frames_per_buffer=CHUNK)
+            stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE,
+                            input=True, output=True, frames_per_buffer=CHUNK)
 
             print("**RECORDING**")
 

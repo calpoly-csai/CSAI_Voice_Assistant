@@ -29,16 +29,7 @@ args = parser.parse_args()
 
 
 def main():
-    """
-    Trains a using the ww_model.py class
-
-    Args:
-        None
-
-    Returns:
-        None
-
-    """
+    # Trains a model using the ww_model.py class
 
     # Instantiate Model class
     ww_model = Model()

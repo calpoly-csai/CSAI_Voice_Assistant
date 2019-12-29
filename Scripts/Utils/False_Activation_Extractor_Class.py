@@ -190,7 +190,7 @@ class False_Activation:
 
         random.shuffle(self.false_files)
 
-        Path_To = REPO_PATH + "%sData%sWakeWord%sAudio%sNot Wake Word%s" % \
+        Path_To = REPO_PATH + "%sData%sWakeWord%sAudio%sNot_Wake_Word%s" % \
             (delim, delim, delim, delim, delim)
 
         for files in self.false_files[:self.false_count - 1]:

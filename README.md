@@ -28,9 +28,11 @@ _Data Lead_
 
 [**Richa Gadgil**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/richa_gadgil_profile.html) - _Natural Language Processing Lead_
 
-[**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Information Infrastructure Lead_
+[**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Test Lead_
 
 [**Tyler Herzog**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_herzog_profile.html) - _Hardware Lead_
+
+[**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Information Infrastructure Lead_
 
 # Active Developers:
 
@@ -68,8 +70,6 @@ _Data Lead_
 [**Sai Pamidi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/sai_pamidi_profile.html)
 
 [**Shubham Sengar**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/shubham_sengar_profile.html)
-
-[**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html)
 
 [**Kush Upadhyay**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kush_upadhyay_profile.html)
 

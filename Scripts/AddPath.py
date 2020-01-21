@@ -9,6 +9,7 @@ Description: Adds the path to the CSAI Voice Assistant
 '''
 import json
 import os
+
 from Utils.OS_Find import Path_OS_Assist
 
 
@@ -33,8 +34,7 @@ def main():
 
     path_json["PATH"] = path
 
-    with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "w") \
-            as in_json:
+    with open(os.getcwd() + "%sUtils%sPATH.json" % (delim, delim), "w") as in_json:
         json.dump(path_json, in_json)
         print("Path %s has been added to Utils/PATH.json. If an error has "
               "occurred, you can run the program again and reinsert the path")

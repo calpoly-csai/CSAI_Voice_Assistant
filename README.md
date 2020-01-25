@@ -9,17 +9,11 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 [**Chidi Ewenike**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/chidi_ewenike_profile.html) - 
 _Project Lead_
 
-**Charles Schnelz** - 
-_Software Lead_
-
 [**Miles Aikens**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/miles_aikens_profile.html) - 
-_Software/Android Development Lead_
+_Software/Mobile Development Lead_
 
 [**Jason Ku**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jason_ku_profile.html) - 
 _Software Lead_
-
-**Ryan Elliot** - 
-_iOS Development Lead_
 
 [**Michael Fekadu**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/michael_fekadu_profile.html) - 
 _Data Lead_
@@ -36,6 +30,7 @@ _Data Lead_
 
 # Active Developers:
 
+[**Jay Ahn**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jay_ahn_profile.html)
 
 [**Steven Bradley**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/steven_bradley_profile.html)
 
@@ -57,6 +52,8 @@ _Data Lead_
 
 [**Eden Hoover**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/eden_hover_profile.html)
 
+[**Adam Lee**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/adam_lee_profile.html)
+
 [**Max Mohammadi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/max_mohammadi_profile.html) 
 
 [**Taylor Nguyen**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/taylor_nguyen_profile.html)
@@ -66,6 +63,8 @@ _Data Lead_
 [**Adam Perlin**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/adam_perlin_profile.html)
 
 [**Sai Pamidi**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/sai_pamidi_profile.html)
+
+[**Storm Randolph**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/viet_nguyen_profile.html)
 
 [**Kush Upadhyay**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/kush_upadhyay_profile.html)
 

@@ -29,9 +29,11 @@ def main():
         response = input().lower()
         print()
 
+        # AddPath script
         if (response == "p"):
             AddPath.main()
 
+        # Audio_Data_Recording script
         elif (response == "r"):
             while not confirm == "y":
                 print("Enter your username (this will be used to label your audio recordings).")
@@ -42,6 +44,7 @@ def main():
             Audio_Data_Recording.main(username)
             print()
 
+        # Scrape_Gutenburg_Audio script
         elif (response == "s"):
             while not confirm == "y":
                 print("Enter the Gutenburg audio link")
@@ -55,13 +58,13 @@ def main():
                 print(e)
             print()
 
+        # False_Activation_Extractor script
         elif (response == "f"):
             while not confirm == "y":
-                # This hows the 
                 try:
                     print(False_Activation_Extractor.main(["-h"]))
                 except:
-                    #do nothing
+                    # do nothing
                     print()
 
                 print("\nEnter arguments with flags: ")
@@ -78,6 +81,7 @@ def main():
                 print(e)
             print()
 
+        # Train_Model script
         elif (response == "t"):
             try:
                 Train_Model.main()

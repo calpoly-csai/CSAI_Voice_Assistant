@@ -9,6 +9,28 @@ All programs need to be run from the Scripts directory. Programs will not run ot
 Also, you need to ensure that the path to the CSAI Voice Assistant repository is in the Scripts/Utils/READ.json. To do so, simply run 
 AddPath.py and insert the path there. All the programs run based on this path. 
 
+# NIMBUS CLI SUITE
+
+The new script, CLI.py, is a relatively simple and straightforward all-in-one script that can serve as a hub of your Nimbus-related operations. Now you can run any useful script at the press of a button!
+
+To start it up, simply run the command `python CLI.py`. The script will run and display the following options for you.
+1. (p) to add or edit the repository (p)ath
+* This edits the Path.JSON file in the repository to make sure that the rest of your scripts will be accessing files from the right location. You only need to run this once unless you get a new laptop or move your folders around.
+2. (r) to (r)ecord audio
+* Begins a audio data recording session, more information on that can be found below.
+3. (s) to (s)crape Gutenburg audio
+* Runs the `Scrape_Gutenburg_Audio.py` script, more information on that can be found below.
+4. (f) to extract (f)alse activation data
+* Begins a false activation data collection session, more information on that can be found below.
+5. (t) to (t)rain a model
+* Trains a model based on the data you have in your repository.
+6. (e) to (e)xit
+* Closes the CLI.
+
+Coming soon: Awaken Nimbus
+
+Please offer suggestions if you have any regarding the usability, helpfulness, and efficiency of the CLI script!
+
 # Audio Data Recording
 
 To obtain audio data for the wake word, please view the audio recording script ```Audio_Data_Recording.py```

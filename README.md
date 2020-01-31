@@ -26,7 +26,7 @@ _Data Lead_
 
 [**Tyler Herzog**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_herzog_profile.html) - _Hardware Lead_
 
-[**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Information Infrastructure Lead_
+[**Austin Silveria**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/austin_silveria_profile.html) - _Information Infrastructure Lead_
 
 # Active Developers:
 

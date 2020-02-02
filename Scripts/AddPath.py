@@ -30,6 +30,7 @@ def main():
             confirm = input()
 
             if (confirm == "n"):
+                confirm = ""
                 break
             if (confirm == "y"):
                 path = temp

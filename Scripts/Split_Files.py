@@ -75,7 +75,7 @@ def split(args, path, p):
         clearFolder(os.path.join(path, "Test_Data"))
     for i in AudioFiles:
         val = random.randint(1, 100)
-        if val <= (args.s*100):
+        if val <= (args.s * 100):
             oldPath = os.path.join(p, i)
             newPath = os.path.join(path, "Train_Data", i)
             shutil.copy(oldPath, newPath)

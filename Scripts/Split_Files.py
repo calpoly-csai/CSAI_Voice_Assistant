@@ -1,10 +1,12 @@
 """
 Title: Split Files
 Author: Sai Swaroop Pamidi
-Date: 08/06/2019
+Date: 02/02/2020
 Organization: Cal Poly CSAI
 Description: split audio files into test and train data
-
+Need to delete the Train_Data and Test_Data in both Wake_Word
+and Not_Wake_Word first time to run this script. This is
+to set a soft permission to the files.
 """
 import argparse
 import json

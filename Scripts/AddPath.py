@@ -29,10 +29,10 @@ def main():
             print("\n\n(y) for yes | (n) for no")
             confirm = input()
 
-            if (confirm == "n"):
-                break
             if (confirm == "y"):
                 path = temp
+ 
+            confirm = ""
 
     path_json["PATH"] = path
 

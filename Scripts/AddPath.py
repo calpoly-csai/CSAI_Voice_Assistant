@@ -34,8 +34,6 @@ def main():
                 break
             if (confirm == "y"):
                 path = temp
- 
-            confirm = ""
 
     path_json["PATH"] = path
 

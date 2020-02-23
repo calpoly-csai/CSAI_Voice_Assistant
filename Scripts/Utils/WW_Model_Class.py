@@ -42,10 +42,10 @@ class Model:
             (self.delim, self.delim, self.delim, self.delim)
 
         # name of json data files
-        self.WW_TRAIN = "Wake_Word_Train_data.json"
-        self.NWW_TRAIN = "Not_Wake_Word_Train_data.json"
-        self.WW_TEST = "Wake_Word_Test_data.json"
-        self.NWW_TEST = "Not_Wake_Word_Test_data.json"
+        self.WW_TRAIN = "Wake_Word_Train_Data.json"
+        self.NWW_TRAIN = "Not_Wake_Word_Train_Data.json"
+        self.WW_TEST = "Wake_Word_Test_Data.json"
+        self.NWW_TEST = "Not_Wake_Word_Test_Data.json"
         self.WW_DATA = "ww_data.json"
         self.NWW_DATA = "nww_data.json"
 

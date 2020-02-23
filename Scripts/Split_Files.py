@@ -47,7 +47,7 @@ def parser():
         if '-p2' in sys.argv:
             isNotWakeWord = True
     else:
-        print("usage: splitFiles.py: required to use -p1 or -p2 ")
+        print("usage: Split_Files.py: required to use -p1 or -p2 ")
         exit()
 
     return args, isWakeWord, isNotWakeWord

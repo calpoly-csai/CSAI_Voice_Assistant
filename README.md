@@ -10,19 +10,19 @@ The "Cal Poly Computer Science & Artificial Intelligence" club is designing a vo
 _Project Lead_
 
 [**Miles Aikens**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/miles_aikens_profile.html) - 
-_Software/Mobile Development Lead_
+_Software/Cloud Infrastructure Lead_
 
 [**Jason Ku**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/jason_ku_profile.html) - 
-_Software Lead_
+_Software/Test Lead_
 
 [**Michael Fekadu**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/michael_fekadu_profile.html) - 
 _Data Lead_
 
-[**John Waidhofer**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/john_waidhofer_profile.html) - _Web Development Lead_
+[**John Waidhofer**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/john_waidhofer_profile.html) - _Application Development Lead_
 
 [**Richa Gadgil**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/richa_gadgil_profile.html) - _Natural Language Processing Lead_
 
-[**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Test Lead_
+[**Cameron Toy**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/cameron_toy_profile.html) - _Software Lead_
 
 [**Tyler Herzog**](http://htmlpreview.github.com/?https://github.com/calpoly-csai/member_bios/blob/master/bios/tyler_herzog_profile.html) - _Hardware Lead_
 
